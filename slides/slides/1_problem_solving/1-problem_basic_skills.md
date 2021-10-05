@@ -1,37 +1,27 @@
 <!-- .slide: data-background="#003d73" -->
 ## Problem solving + Basic skills
 
-![AU Logo](./../img/HACK_LOGO.png "AU Logo") <!-- .element style="width: 200px; position: fixed; bottom: 50px; left: 50px" -->
+![AU Logo](./../img/HACK_LOGO.png "AU Logo") <!-- .element style="width: 200px; position: absolute; top: 200px; left: 50px" -->
 
 ----
 
 ### What to do from here on out?
 
 
-TODO: something
-<!-- This first workshop will focus on problem-solving and basic skills. Here we will help you break down projects into small manageable tasks, helping you to spend your time wisely. This workshop will serve as the foundation for the rest of the workshops. -->
-
-<!--
-Problemløsning
-  Hvordan går man igang med en opgave
-Grundlæggende færdigheder
-  Opsætning og konfiguration af toolchains
-  Opsætning og konfiguration af editors
-  Hvad er god kode?
-  Hvornår er noget godt nok?
-  RTFM
--->
-
+* Basic skills
+* Problem solving
 
 ---
 
 ## Basic skills
 
+What is learnt on real courses:
+
 * Programing language
-  * control flow, function/methods
+  * control flow, methods/function
 * Data structures
   * List, queue, stack, tree
-* Sofware design / Architecture
+* Sofware Architecture & design
 
 ----
 
@@ -41,14 +31,20 @@ Grundlæggende færdigheder
 * Views
 * Plugins / extensions
 
+
 ----
 
-#### C#
+#### C / C++ / C#
 
 * Visual Studio does everything
-* Command line (CMD) compiling
-  * .Net Core: `dotnet build`
-  * .Net: `csc.exe`
+  *  But what actually happens?
+* C & C++ The compiler:  <!-- .element: class="fragment" data-fragment-index="1" -->
+  * TODO: What is it actually called
+* For C# the compiler is called: <!-- .element: class="fragment" data-fragment-index="2" -->
+  * .Net Core: `dotnet build` <!-- .element: class="fragment" data-fragment-index="2" -->
+  * .Net: `csc.exe` <!-- .element: class="fragment" data-fragment-index="2" -->
+
+* Many errors are reported by the compiler <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ----
 
@@ -57,7 +53,7 @@ Grundlæggende færdigheder
 * Javascript files can be 'executed' directly in browser.
 * Typescript (Superset of Javascript)
   * Must be transpiled to Javascript
-* Tool chain tools e.g. Gulp
+  * Requires a tool chain tools e.g. Gulp
 
 ```javascript
 gulp.task('serve', () => {
@@ -85,7 +81,14 @@ gulp.task('serve', () => {
 
 * Correct indention
 * Readability
-* Cohesion and coupling
+* High Cohesion
+* Low Coupling
+
+```csharp
+if(a < EARLIEST_HOUR && b < EARLIEST_HOUR
+&& c < EARLIEST_HOUR)
+a = EARLIEST_HOUR; b = EARLIEST_HOUR; c = EARLIEST_HOUR;
+```
 
 ----
 
@@ -130,11 +133,11 @@ public class TennisGame3 : ITennisGame {
 * Does it solve the problem?
   * Look at problem statement / exercise desciption
 * Any known bugs? <!-- .element: class="fragment" data-fragment-index="1" -->
-  * Small cosmetic errors?
-  * Big functional errors?
+  * Small cosmetic errors?<!-- .element: class="fragment" data-fragment-index="1" -->
+  * Big functional errors?<!-- .element: class="fragment" data-fragment-index="1" -->
 * Do you know how to solve these? <!-- .element: class="fragment" data-fragment-index="2" -->
 
-TODO: 
+TODO: what is good enough?
 
 ---
 
@@ -148,7 +151,79 @@ TODO:
 
 ----
 
-TODO: Example on problem solving
+### Half of a square
+
+Write a program that given a number lets say 5, prints half of a 5*5 square.
+
+```
+#####
+####
+###
+##
+#
+```
+
+----
+
+### Solving the problem
+
+* You properly know how to print a full square given the number 5
+```
+#####
+#####
+#####
+#####
+#####
+```
+
+Or at least<!-- .element: class="fragment" data-fragment-index="1" -->
+
+```
+#####
+```
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+----
+
+### Counting down
+
+Can you write a expression in the loop such that we can count down?
+
+```csharp
+for (int row = 1; row <= 5; row++) {
+   Console.WriteLine(expression);
+}
+```
+
+Maybe<!-- .element: class="fragment" data-fragment-index="2" --> `row*-1`
+
+----
+
+### Conting down (cont.)
+
+| Row | Desired | Row * -1 | Difference |
+|-----|---------|---------|------------|
+| 1 | 5 | -1 | 6 |
+| 2 | 4 | -2 | 6 |
+| 3 | 3 | -3 | 6 |
+| 4 | 2 | -4 | 6 |
+| 5 | 1 | -5 | 6 |
+
+* Formula must be<!-- .element: class="fragment" data-fragment-index="2" --> `(#Row * -1) + 6`
+  * or just `6-#Row`
+
+----
+
+#### A final solution
+
+```csharp
+for (int row = 1; row <= size; row++) {
+    for (int j = 1; j <= (size+1) - row; j++) {
+        System.Console.Write("#");
+    }
+    System.Console.WriteLine("");
+}
+```
 
 ---
 
@@ -170,7 +245,7 @@ We will use this definition:
 ### User stories
 
 * Vertical:
-  * Cut accross multiple layers in architectual layers
+  * Cut accross multiple layers in the architecture
 * Testable:
   * Should be testable either by code or manually
 * User valued:
@@ -178,11 +253,27 @@ We will use this definition:
 
 ----
 
+### User stories vs Use case
+
+"User Stories are centered on the result and the benefit of the thing you're describing, whereas Use Cases can be more granular, and describe how your system will act"
+
+* Both has a role, goal, and acceptance
+* User story contain fewer details
+* Use cases have all details up front
+
+
+----
+
 ### User stories examples
 
-* Removing `Console.WriteLine("Hello World")`? 
+Is removing:
+```csharp
+Console.WriteLine("Hello World")
+```
+a user story?
+
 * Adding a button to UI?<!-- .element: class="fragment" -->
-* Setting up project architecture? <!-- .element: class="fragment" -->
+* Setting up project structure? <!-- .element: class="fragment" -->
 
 ----
 
@@ -207,6 +298,20 @@ From minutes to months.
 * Problem is divided into smaller sections
 * Easier to make a plan
 * Easier to recognise known parts
+
+Note:
+- Users benifits earlier
+  - you make money faster
+  - you always have something that works
+  - you always have something you can test
+
+----
+
+![./img/user-stories.png](./img/user-stories.png)
+
+Note:
+Blue: Scrum - harder to test
+Waterfall: Customer/users get everything at once - how to test?
 
 ---
 
@@ -241,10 +346,38 @@ From minutes to months.
 | 10.000 | 10% | * | AL | 4.00% |
 | 50.000 | 15% | * | CA | 8.25% |
 
+
+----
+
+#### User stories
+
+1. Input #item
+2. Validate input
+3. Input price per item
+4. Validate price
+5. Sum value
+6. Present total
+7. Caculate disctount for 
+  1. 1000
+  2. 5000
+  3. 7000
+  4. 10.000
+  5. 50.000
+8. Input state code
+9. Validate state code
+10. Present error
+11. Calculate tax rate for
+  1. UT
+  2. NV
+  3. TX
+  4. AL
+  5. CA
+
 ---
 
 ## Reference
 
-* Hackers guide
-* 
-TODO:
+* Think like a programmer
+* Giphy
+* https://kata-log.rocks/elephant-carpaccio
+
