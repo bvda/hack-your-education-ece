@@ -255,7 +255,7 @@ We will use this definition:
 
 ### User stories vs Use case
 
-"User Stories are centered on the result and the benefit of the thing you're describing, whereas Use Cases can be more granular, and describe how your system will act
+"User Stories are centered on the result and the benefit of the thing you're describing, whereas Use Cases can be more granular, and describe how your system will act"
 
 * Both has a role, goal, and acceptance
 * User story contain fewer details
