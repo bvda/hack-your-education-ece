@@ -38,13 +38,17 @@ What is learnt on real courses:
 
 * Visual Studio does everything
   *  But what actually happens?
-* C & C++ The compiler:  <!-- .element: class="fragment" data-fragment-index="1" -->
-  * TODO: What is it actually called
-* For C# the compiler is called: <!-- .element: class="fragment" data-fragment-index="2" -->
-  * .Net Core: `dotnet build` <!-- .element: class="fragment" data-fragment-index="2" -->
-  * .Net: `csc.exe` <!-- .element: class="fragment" data-fragment-index="2" -->
+*<!-- .element: class="fragment" data-fragment-index="1" --> C & C++ The compiler:
+  * `GCC` or some thing like this
+*<!-- .element: class="fragment" data-fragment-index="2" --> For C# the compiler is called:
+  * .Net Core: `dotnet build`
+  * .Net: `csc.exe` 
 
-* Many errors are reported by the compiler <!-- .element: class="fragment" data-fragment-index="3" -->
+*<!-- .element: class="fragment" data-fragment-index="3" --> Many errors are reported by the compiler
+
+----
+
+#### Stacktraces
 
 ----
 
@@ -132,12 +136,10 @@ public class TennisGame3 : ITennisGame {
 
 * Does it solve the problem?
   * Look at problem statement / exercise desciption
-* Any known bugs? <!-- .element: class="fragment" data-fragment-index="1" -->
-  * Small cosmetic errors?<!-- .element: class="fragment" data-fragment-index="1" -->
-  * Big functional errors?<!-- .element: class="fragment" data-fragment-index="1" -->
-* Do you know how to solve these? <!-- .element: class="fragment" data-fragment-index="2" -->
-
-TODO: what is good enough?
+*<!-- .element: class="fragment" data-fragment-index="1" --> Any known bugs?
+  * Small cosmetic errors?
+  * Big functional errors?
+*<!-- .element: class="fragment" data-fragment-index="2" --> Do you know how to solve these?
 
 ---
 
@@ -187,11 +189,11 @@ Or at least<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ### Counting down
 
-Can you write a expression in the loop such that we can count down?
+Can you write an `expression` in the loop such that it prints `5` through `1`?
 
 ```csharp
 for (int row = 1; row <= 5; row++) {
-   Console.WriteLine(expression);
+   Console.WriteLine(`expression`);
 }
 ```
 
@@ -217,11 +219,11 @@ Maybe<!-- .element: class="fragment" data-fragment-index="2" --> `row*-1`
 #### A final solution
 
 ```csharp
-for (int row = 1; row <= size; row++) {
-    for (int j = 1; j <= (size+1) - row; j++) {
-        System.Console.Write("#");
+for (int row = 1; row <= 5; row++) {
+    for (int j = 1; j <= 6-row; j++) {
+        Console.Write("#");
     }
-    System.Console.WriteLine("");
+    Console.Write("\n");
 }
 ```
 
@@ -270,7 +272,7 @@ Is removing:
 ```csharp
 Console.WriteLine("Hello World")
 ```
-a user story?
+a user good story?
 
 * Adding a button to UI?<!-- .element: class="fragment" -->
 * Setting up project structure? <!-- .element: class="fragment" -->
@@ -307,7 +309,7 @@ Note:
 
 ----
 
-![./img/user-stories.png](./img/user-stories.png)
+![./img/user-stories.png](./img/user-stories.png) <!-- .element: style="height:500px" -->
 
 Note:
 Blue: Scrum - harder to test
@@ -319,7 +321,7 @@ Waterfall: Customer/users get everything at once - how to test?
 
 * Divide into 2-3 persons groups
     * Try meeting new people :-)
-* 15 min for breaking down problem into user stories
+* 15 min for breaking down problem into small user stories
 * If time allows
     * Start implementing in 8 minute development sprints
 
@@ -349,7 +351,9 @@ Waterfall: Customer/users get everything at once - how to test?
 
 ----
 
-#### User stories
+<!-- .slide: style="font-size: 0.5em" -->
+
+#### User stories <!-- .element: style="font-size:1.3em" -->
 
 1. Input #item
 2. Validate input
@@ -377,7 +381,7 @@ Waterfall: Customer/users get everything at once - how to test?
 
 ## Reference
 
-* Think like a programmer
+* Think like a programmer by V. Anton Spraul
 * Giphy
 * https://kata-log.rocks/elephant-carpaccio
 
