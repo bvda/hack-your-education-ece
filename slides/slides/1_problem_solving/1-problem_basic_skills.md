@@ -15,13 +15,13 @@
 
 ## Basic skills
 
-What is learnt on real courses:
+What is taught on real courses:
 
 * Programing language
-  * control flow, methods/function
+  * Control flow, methods/function
 * Data structures
   * List, queue, stack, tree
-* Sofware Architecture & design
+* Software architecture & design
 
 ----
 
@@ -39,7 +39,7 @@ What is learnt on real courses:
 * Visual Studio does everything
   *  But what actually happens?
 *<!-- .element: class="fragment" data-fragment-index="1" --> C & C++ The compiler:
-  * `GCC` or some thing like this
+  * E.g. `GCC`
 *<!-- .element: class="fragment" data-fragment-index="2" --> For C# the compiler is called:
   * .Net Core: `dotnet build`
   * .Net: `csc.exe` 
@@ -52,11 +52,11 @@ What is learnt on real courses:
 
 ----
 
-#### Javascript
+#### JavaScript
 
-* Javascript files can be 'executed' directly in browser.
-* Typescript (Superset of Javascript)
-  * Must be transpiled to Javascript
+* JavaScript files can be 'executed' directly in browser.
+* TypeScript (Superset of JavaScript)
+  * Must be transpiled to JavaScript
   * Requires a tool chain tools e.g. Gulp
 
 ```javascript
@@ -76,8 +76,8 @@ gulp.task('serve', () => {
 ### Toolchains
 
 * Do you use any other tools?
-    * Cross compiling, linting, obfuscating, etc.?
-    * Are errors comming from these?
+    * Cross compilation, linting, obfuscating, etc.?
+    * Are errors coming from these?
 
 ----
 
@@ -189,7 +189,8 @@ Or at least<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ### Counting down
 
-Can you write an `expression` in the loop such that it prints `5` through `1`?
+Can you write an `expression` in the loop such that it prints the numbers `5` through `1`?
+=======
 
 ```csharp
 for (int row = 1; row <= 5; row++) {
@@ -302,7 +303,7 @@ From minutes to months.
 * Easier to recognise known parts
 
 Note:
-- Users benifits earlier
+- Users benefits earlier
   - you make money faster
   - you always have something that works
   - you always have something you can test
@@ -361,7 +362,7 @@ Waterfall: Customer/users get everything at once - how to test?
 4. Validate price
 5. Sum value
 6. Present total
-7. Caculate disctount for 
+7. Calculate discount for 
   1. 1000
   2. 5000
   3. 7000
