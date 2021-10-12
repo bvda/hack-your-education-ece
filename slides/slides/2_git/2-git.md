@@ -68,6 +68,12 @@
 
 ----
 
+### Ignore
+
+![Git ignore templates](./img/gitignore.png "Templates on github")
+
+----
+
 ### Add collaborators
 
 ![Manage access](./img/access.png "Manage user access") <!-- .element: style="height: 600px" -->
@@ -125,19 +131,35 @@ $ git add remote origin https://github.com/hkirk/FaceSite
 
 ----
 
+TODO: 
 ## Downloading repository
 
+1. Fork Gitlecture
+![Fork repository on github](./img/fork.png "Fork on github") <!-- .element: style="height: 150px" -->
+2. 
+
 ```shell
-$ git clone git@github.com:hkirk/GitLecture.git
+$ git clone <new url>
 ```
 
 or
 
-![Clone](./img/clone.png "Clone repo")
+![Clone](./img/clone.png "Clone repository")
+
+Note:
+If you have cloned before forking
+
+```
+$ git remote -v
+$ git remote remove origin
+$ git remote add origin git@github.com:Henrik-Personal/GitLecture.git
+$ git push --set-upstream origin main
+```
+
 
 ----
 
-### Basic Git commands
+### Basic Git commands 1
 
 * **status**
     * shows which branch you are one (more about branches later)
@@ -146,6 +168,11 @@ or
 * **log**
     * shows you snapshot history
     * *-n*, *--oneline*, *--graph*
+
+----
+
+### Basic git commands 2
+
 * **add**
     * adds file to staging
 * **commit**
@@ -154,17 +181,21 @@ or
 
 ----
 
-## Other usefull commands
+## Other usefull (non-git) commands
 
-* **touch**: creates an empty file
-* **echo**: prints
-* **>>**: appends output from left side to file on right side
+* **touch**
+    * creates an empty file
+* **echo**
+    * prints
+* **>>**
+    * appends output from left side to file on right side
     * `echo "Hej" >> file.txt`
-* **>**: overwrites file on right side
+* **>**
+    * overwrites file on right side
 
 ----
 
-### What is in the directory
+### Ex.: What is in the directory
 
 1. What does *status* and *log* say in GitLecture?
 2. Create a file 'plan.txt' and *add* to staging
@@ -180,41 +211,150 @@ or
 
 * A commit must 'live' on some branch
 * There can be many parallel branches simultanius
-* The main branch is typically called 'main' og 'master'
+* The main branch is typically called 'main', 'master' or 'development'
 
 ----
 
-### checkout and reset
+* <!-- .element: class="fragment" --> `HEAD` is the most recent commit on that branch
+* <!-- .element: class="fragment" --> `master` is the branch
 
-
-
-----
-
-### Ignore
-
-![Git ignore templates](./img/gitignore.png "Templates on github")
+![Branches](./img/head.png "Branches")
 
 ----
 
-git amend
+### Branches
+
+TODO ascii art?
+
+![Multiple branches](./img/branches.png "Branches") <!-- .element: style="height: 400px" -->
+
+----
+
+### Commands regarding branches
+
+* **checkout [name]**
+    * switches to given branch
+* **checkout -b [name]**
+    * Creates the branch and switches
+* **branch**
+    * Lists all branches
+* **branch [name]**
+    * Creates a new branch
+* **diff [name]**
+    * Show differences on current and `[name]` branched
+
+----
+
+<!-- .slide: style="font-size: 0.8em" -->
+
+### Ex. Branching
+
+1. Which branch are you on?
+2. Create a new branch [initials]-branch, and show branches
+3. Switch to the new branch and watch what the **status** displays now
+4. How do you workspace now look?
+5. Create a new file 'file.txt' containing you name
+6. Add the file and commit, check **log**
+7. Switch back to main
+8. Create a file 'file2.txt' with some code
+9. Add a commit file and check **log**
+10. What are the difference on main and your new branch
+
+---
+
+### Merging
+
+* Once a feature is done - you want to merge it back to you 'main' branch
+
+```
+      A---B---C topic
+     /
+D---E---F---G  master
+```
+
+`$ git merge topic` <!-- .element: class="fragment" -->
+
+```
+      A---B---C topic
+     /         \
+D---E---F---G---H main
+```
+<!-- .element: class="fragment" --> 
+
+----
+
+### Merging continued and cleanup
+
+* **merge** and **diff**
+    * can handle multiple branches at once
+* **branch -d [name]**
+    * Deletes the branch with `[name]`
+
+----
+
+<!-- .slide: style="font-size: 0.8em" -->
+
+### Ex. Merging
+
+1. Create a branch 'uppercase' and check this out.
+2. Edit the file greeting.txt and make an uppercase greeting
+3. Stage the file and commit. Check **log with --oneline --graph --all**
+4. Checkout the 'main' branch
+5. Check content of greeting.txt with `cat greeting.txt` or an editor
+6. Diff the branches and then merge 'uppercase' into 'main'
+7. What is the content of greeting.txt now?
+8. Delete the uppercase branch
 
 
 ---
 
-## Branch
+## Amend
+
+* Something we commit and miss something really obvious
+     * amend can help us fix this
+
+* **amend**
+    * Replaces lastest commit on current branch
 
 ----
 
-## Pull request
+### Ex. 
 
-TODO github:
+1. Create a file 'bar.txt', stage and commit
+2. What do **status** look like?
+3. What do **log -p** show?
+4. Added some text to 'bar.txt' and stage it
+5. Amend these changes by **commit --amend**
+6. Check **log p**
+7. Try amending againg, what happens?
+
+---
+
+<!-- .slide: style="font-size: 0.9em" -->
+
+## Sharing on Github
+
+* **push**
+    * Pushes current branch to remote
+* **push --set-upstream <remote> <branch>**
+    * Tells which remote a branch should be pushed to as default
+    * Only nessesary for new branches
+* **pull**
+    * Incorporates changes from remote into current branch
+    * shorthand for `git fetch; git merge FETCH_HEAD`
 
 ----
 
-## Merge
+### Pull requests
 
-
-git diff / github diff
 
 ----
+
+### reset
+
+---
+
+## References:
+
+* (A Visual Git Reference)[http://marklodato.github.io/visual-git-guide/index-en.html]
 
