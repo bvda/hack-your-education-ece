@@ -5,8 +5,7 @@
 
 ----
 
-### What to do from here on out?
-
+### TODO Today
 
 * Basic skills
 * Problem solving
@@ -19,9 +18,12 @@ What is taught on real courses:
 
 * Programing language
   * Control flow, methods/function
+  * OORPG, OOP, ITS1, ITS2, Programmering, ..
 * Data structures
   * List, queue, stack, tree
+  * DOA, Algoritmer og Datastrukure
 * Software architecture & design
+  * SWD, ITS3, Software Architecture, 
 
 ----
 
@@ -48,14 +50,10 @@ What is taught on real courses:
 
 ----
 
-#### Stacktraces
-
-----
-
 #### JavaScript
 
 * JavaScript files can be 'executed' directly in browser.
-* TypeScript (Superset of JavaScript)
+*<!-- .element: class="fragment" data-fragment-index="1" --> TypeScript (Superset of JavaScript)
   * Must be transpiled to JavaScript
   * Requires a tool chain tools e.g. Gulp
 
@@ -69,7 +67,7 @@ gulp.task('serve', () => {
     gulp.watch(['*.html', '*.md'], gulp.series('reload'))
     ...
 ```
-<!-- .element: class="fragment" data-fragment-index="1" -->
+<!-- .element: class="fragment" data-fragment-index="2" -->
 
 ----
 
@@ -101,7 +99,8 @@ public class TennisGame3 : ITennisGame {
   private int p2; private int p1;
   private string p1N; private string p2N;
 
-  public TennisGame3(string player1Name, string player2Name) {
+  public TennisGame3(string player1Name, string player2Name)
+  {
     this.p1N = player1Name;
     this.p2N = player2Name;
   }
@@ -117,7 +116,9 @@ public class TennisGame3 : ITennisGame {
       if (p1 == p2)
         return "Deuce";
       s = p1 > p2 ? p1N : p2N;
-      return ((p1 - p2) * (p1 - p2) == 1) ? "Advantage " + s : "Win for " + s;
+      return ((p1 - p2) * (p1 - p2) == 1)
+                  ? "Advantage " + s
+                  : "Win for " + s;
     }
   }
   public void WonPoint(string playerName) {
@@ -190,7 +191,7 @@ Or at least<!-- .element: class="fragment" data-fragment-index="1" -->
 ### Counting down
 
 Can you write an `expression` in the loop such that it prints the numbers `5` through `1`?
-=======
+
 
 ```csharp
 for (int row = 1; row <= 5; row++) {
@@ -198,13 +199,13 @@ for (int row = 1; row <= 5; row++) {
 }
 ```
 
-Maybe<!-- .element: class="fragment" data-fragment-index="2" --> `row*-1`
+Maybe<!-- .element: class="fragment" data-fragment-index="2" --> '`row * -1`'
 
 ----
 
 ### Conting down (cont.)
 
-| Row | Desired | Row * -1 | Difference |
+| Row | Desired | 'Row * -1' | Difference |
 |-----|---------|---------|------------|
 | 1 | 5 | -1 | 6 |
 | 2 | 4 | -2 | 6 |
@@ -212,8 +213,8 @@ Maybe<!-- .element: class="fragment" data-fragment-index="2" --> `row*-1`
 | 4 | 2 | -4 | 6 |
 | 5 | 1 | -5 | 6 |
 
-* Formula must be<!-- .element: class="fragment" data-fragment-index="2" --> `(#Row * -1) + 6`
-  * or just `6-#Row`
+* Formula must be<!-- .element: class="fragment" data-fragment-index="2" --> `(Row * -1) + 6`
+  * or just `6 - Row`
 
 ----
 
@@ -233,6 +234,16 @@ for (int row = 1; row <= 5; row++) {
 ## Lets slice an elephant
 
 ![Slicing](./img/meat.jpg "Meat slicer") <!-- .element style="width: 400px" -->
+
+----
+
+### User stories vs Use case
+
+"`User Stories` are centered on the result and the benefit of the thing you're describing, whereas `Use Cases` can be more granular, and describe how your system will act"
+
+* Both has a role, goal, and acceptance
+* User story contain fewer details
+* Use cases have all details up front
 
 ----
 
@@ -256,17 +267,6 @@ We will use this definition:
 
 ----
 
-### User stories vs Use case
-
-"User Stories are centered on the result and the benefit of the thing you're describing, whereas Use Cases can be more granular, and describe how your system will act"
-
-* Both has a role, goal, and acceptance
-* User story contain fewer details
-* Use cases have all details up front
-
-
-----
-
 ### User stories examples
 
 Is removing:
@@ -275,8 +275,9 @@ Console.WriteLine("Hello World")
 ```
 a user good story?
 
-* Adding a button to UI?<!-- .element: class="fragment" -->
-* Setting up project structure? <!-- .element: class="fragment" -->
+Adding a button to UI?<!-- .element: class="fragment" -->
+
+Setting up project structure? <!-- .element: class="fragment" -->
 
 ----
 
@@ -298,7 +299,7 @@ From minutes to months.
 
 ### Why small stories?
 
-* Problem is divided into smaller sections
+* Problem is divided into smaller parts
 * Easier to make a plan
 * Easier to recognise known parts
 
