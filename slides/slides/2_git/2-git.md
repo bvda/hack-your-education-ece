@@ -2,7 +2,7 @@
 <!-- .slide: data-background="#003d73" -->
 ## Git + Github
 
-![AU Logo](./../img/HACK_LOGO.png "AU Logo") <!-- .element style="width: 200px; position: absolute; top: 200px; left: 50px" -->
+![AU Logo](./../img/HACK_LOGO.png "AU Logo") <!-- .element style="position: absolute; top: 200px; left: 50px" -->
 
 ----
 
@@ -11,6 +11,7 @@
 * What is Git & Github
 * How do I use Git & Github
 * Lots of work
+* Slides and code: https://github.com/ECE-Henrik/hack-your-education-e21
 
 ---
 
@@ -440,6 +441,8 @@ for (int i = 0; i < 10; i++)
 
 1. **push** your changes on the branches 'main' and '[initials]-branch' to your github account
 2. Create a pull request to 'hkirk/GitLecture'
+
+Optional: (https://github.com/ECE-Henrik/hack-your-education-e21)[https://github.com/ECE-Henrik/hack-your-education-e21]
 
 ---
 
