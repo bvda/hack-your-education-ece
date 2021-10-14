@@ -8,17 +8,20 @@
 
 ## Agenda
 
-* What is Git / Github
-* How do I use Git / Github
+* What is Git & Github
+* How do I use Git & Github
+* Lots of work
 
 ---
 
-## Install
+## Git and Github Desktop install
 
 * Windows (https://git-scm.com/download/win)
 * Mac (https://git-scm.com/download/mac)
 * Linux (apt): sudo apt-get install git
 * Linux (yum): sudo yum install git
+
+* Github for Desktop
 
 ----
 
@@ -35,7 +38,7 @@
 
 * We make mistakes
 * We want to track the reason why something changed
-* TODO: Other?
+* We want to work together easily
 
 ----
 
@@ -44,7 +47,7 @@
 * Distributed version control
 * Each user keep entire history and code on local machine
      * Changes can be made in offline mode
-     * Require internet to share (ofcourse :))
+     * Require internet to share - ofcourse :)
 * There are other VCS system out there
     * Subversion
     * CVS
@@ -55,10 +58,12 @@
 ### What is Github
 
 * Place to host and share repositories
-* Create an account on (www.github.com)[www.github.com]
+* Create an account on [www.github.com](http://www.github.com)
     * Free with limits
 * On top of Git
     * UI, documentation, bug tracking, feature request, pull request
+* Github is one platform:
+    * Bitbucket, GitLab etc. are alternatives
 
 ---
 
@@ -71,6 +76,22 @@
 ### Ignore
 
 ![Git ignore templates](./img/gitignore.png "Templates on github")
+
+
+----
+
+### Ignore
+
+* Just a file called '.gitignore'
+* Which contains regexp of files to be ignored
+
+```
+.svn
+log/*.log
+tmp/**
+node_modules/
+.sass-cache
+```
 
 ----
 
@@ -110,6 +131,7 @@ $ git add remote origin https://github.com/hkirk/FaceSite
 ### Commit 
 
 * The act of creating a snapshot
+    * and the actually snapshot
 * A repository consists of a series of commits
 * Each commit consists of
     * Information about how file has changed
@@ -131,16 +153,20 @@ $ git add remote origin https://github.com/hkirk/FaceSite
 
 ----
 
-TODO: 
-## Downloading repository
+## Cloning repository
 
-1. Fork Gitlecture
+1. Goto www.github.com/hkirk/GitLecture
+2. Fork this to optain you own copy
 ![Fork repository on github](./img/fork.png "Fork on github") <!-- .element: style="height: 150px" -->
-2. 
+3. 
 
 ```shell
-$ git clone <new url>
+$ git clone git@github.com:hkirk/GitLecture.git
 ```
+
+----
+
+### Cloning via Github Desktop
 
 or
 
@@ -197,13 +223,14 @@ $ git push --set-upstream origin main
 
 ### Ex.: What is in the directory
 
-1. What does *status* and *log* say in GitLecture?
-2. Create a file 'plan.txt' and *add* to staging
+1. What does **status** and **log** say in GitLecture?
+2. Create a file 'plan.txt' and **add** to staging
 3. Check *status*
-4. *Commit* and check *status*
+4. **Stage** and **commit** and check **status**
 5. Change content of 'plan.txt'
-6. Check *status*, *commit* 
-7. How does the *log* look now?
+6. Check **status**, 
+7. Then *stage* and **commit** 
+7. How does the **log** look now?
 
 ---
 
@@ -215,7 +242,7 @@ $ git push --set-upstream origin main
 
 ----
 
-* <!-- .element: class="fragment" --> `HEAD` is the most recent commit on that branch
+* <!-- .element: class="fragment" --> `HEAD` is the most recent commit on main branch
 * <!-- .element: class="fragment" --> `master` is the branch
 
 ![Branches](./img/head.png "Branches")
@@ -223,8 +250,6 @@ $ git push --set-upstream origin main
 ----
 
 ### Branches
-
-TODO ascii art?
 
 ![Multiple branches](./img/branches.png "Branches") <!-- .element: style="height: 400px" -->
 
@@ -250,12 +275,12 @@ TODO ascii art?
 ### Ex. Branching
 
 1. Which branch are you on?
-2. Create a new branch [initials]-branch, and show branches
+2. Create a new **branch** '[initials]-branch', and show branches
 3. Switch to the new branch and watch what the **status** displays now
 4. How do you workspace now look?
 5. Create a new file 'file.txt' containing you name
-6. Add the file and commit, check **log**
-7. Switch back to main
+6. **Stage** file and commit, check **log**
+7. Switch back to the main branch
 8. Create a file 'file2.txt' with some code
 9. Add a commit file and check **log**
 10. What are the difference on main and your new branch
@@ -298,19 +323,56 @@ D---E---F---G---H main
 
 1. Create a branch 'uppercase' and check this out.
 2. Edit the file greeting.txt and make an uppercase greeting
-3. Stage the file and commit. Check **log with --oneline --graph --all**
+3. Stage the file and commit. Check **log** with **--oneline --graph --all**
 4. Checkout the 'main' branch
-5. Check content of greeting.txt with `cat greeting.txt` or an editor
-6. Diff the branches and then merge 'uppercase' into 'main'
-7. What is the content of greeting.txt now?
-8. Delete the uppercase branch
+5. Check content of greeting.txt with `cat greeting.txt` or in an editor
+6. What is the **diff**erence between 'uppercase' into 'main'
+7. Then **merge** 'uppercase' into 'main'
+8. What is the content of greeting.txt now?
+9. Delete the uppercase branch
 
+----
+
+### Fixing conflicts
+
+* Merging a branch can resolve in conflicts
+    * This is merges that git cannot it self resolve.
+* Example of conflict in a file
+```
+<<<<<<< HEAD
+foreach (var i in range)
+{
+=======
+for (int i = 0; i < 10; i++)
+{
+>>>>>>> conflicting-branch
+```
+
+----
+
+### Resolving conflicts
+
+* **status** will show unmerge paths
+* Steps:
+    1. Manually resolve each file
+    2. **add** add each file to mark resolution
+    * or **merge --abort** to abort merge
+
+----
+
+### Ex. working with conflicts
+
+1. **merge** the branch 'conflicting-greetings' 
+2. Use **status** to show changes
+3. Use an editor to fix the conflicts
+4. **status** also show instructions for how to resolve conflicts
+5. What do **log --oneline --graph** show now?
 
 ---
 
 ## Amend
 
-* Something we commit and miss something really obvious
+* Some times we commit and miss something important
      * amend can help us fix this
 
 * **amend**
@@ -318,15 +380,16 @@ D---E---F---G---H main
 
 ----
 
-### Ex. 
+### Ex. using amend
 
-1. Create a file 'bar.txt', stage and commit
+1. Create a file 'bar.txt', **stage** and **commit**
 2. What do **status** look like?
 3. What do **log -p** show?
-4. Added some text to 'bar.txt' and stage it
-5. Amend these changes by **commit --amend**
-6. Check **log p**
-7. Try amending againg, what happens?
+4. Note which name appears the most on the enrollment list
+5. Add name to 'bar.txt' and stage it
+6. Amend these changes by **commit --amend**
+7. Check **log p**
+8. Try amending againg, what happens?
 
 ---
 
@@ -347,14 +410,40 @@ D---E---F---G---H main
 
 ### Pull requests
 
+* Forking a repository on GitHub creates a new repository with the same code
+    * and a link between these
+* A pull requests is the tool to synchronize the to repositories
+
+**Note** if you share access to a private repository pull request is no nessesary - because there are only one repository.
 
 ----
 
-### reset
+### Creating a pull request 1
+
+![New pull request](./img/create-pull-request.png "New pull request")
+
+----
+
+### Creating a pull request 1
+
+![Validate pull request](./img/create-pull-request2.png "Validate pull request")
+
+----
+
+### Updates from main repository
+
+![Update from repo](./img/update-downstream.png "Update from main repositor")
+
+----
+
+### Ex. Working with github
+
+1. **push** your changes on the branches 'main' and '[initials]-branch' to your github account
+2. Create a pull request to 'hkirk/GitLecture'
 
 ---
 
 ## References:
 
-* (A Visual Git Reference)[http://marklodato.github.io/visual-git-guide/index-en.html]
+* [A Visual Git Reference](http://marklodato.github.io/visual-git-guide/index-en.html)
 
