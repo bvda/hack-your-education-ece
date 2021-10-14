@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://localhost:8000/slides/3_debugging/#/3 -->
+<html class="reveal-full-page"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="./reveal.js_files/reset.css">
+		<link rel="stylesheet" href="./reveal.js_files/reveal.css">
+		<link rel="stylesheet" href="./reveal.js_files/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="./reveal.js_files/monokai.css">
+	<style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+	<body class="reveal-viewport" style="--slide-width:960px; --slide-height:700px;">
+		<div class="reveal slide center focused has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="fade">
+			<div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(1.182);">
+				<section style="top: 234px; display: none;" hidden="" aria-hidden="true" class="past">
+					<div style="display: flex;">
+						<div style="display: flex; justify-content: center;">
+							<img src="./reveal.js_files/HACK_LOGO.png" width="20%">
+							<div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
+								<span>YOUR</span>
+								<span>EDUCATION</span>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section style="top: 157px; display: block;" hidden="" aria-hidden="true" class="past">
+					<h2>What is debugging?</h2>
+					<figure>
+						<blockquote cite="./reveal.js_files/399339918213652480">
+							<p>Debugging is like being the detective in a crime movie where you are also the murderer.</p>
+							<figcaption>—Filipe Fortes, <cite>Twitter, Nov. 2013</cite></figcaption>
+						</blockquote>
+					</figure>
+				</section>
+				<section style="top: 296px; display: block;" class="past" hidden="" aria-hidden="true">
+					<ul>
+						<li>Running the application shows us the <mark>effects</mark> (or <mark>symptoms</mark>) of errors, not the <mark>cause</mark> of errors</li>
+					</ul>
+				</section>
+				<section data-background-image="../img/jurassic-poop.jpg" style="top: 238px; display: block;" class="present">
+				<h3>Actual footage</h3>
+				<h4>of a</h4>
+				<h3>debug session</h3>
+			</section>
+			<section style="top: 350px; display: block;" hidden="" aria-hidden="true" class="future">
+			</section>
+			<section style="top: 188px; display: block;" hidden="" aria-hidden="true" class="future">
+				<ul>
+					<li>Syntax or type errors—Always caught and reported by the compiler</li>
+					<li>Typos or simple errors—Passes type-check. Easy to fix when identified</li>
+					<li>Implementation errors</li>
+					<li>Logical errors</li>
+				</ul>
+			</section>
+			<section style="top: 350px; display: none;" hidden="" aria-hidden="true" class="future">
+				<h2>Remedies</h2>
+				<ul>
+					<li>Log information</li>
+					<li>Debuggers</li>
+					<li>Backtracking</li>
+					<li>Problem simplification</li>
+				</ul>	
+			</section>
+			</div>
+		<div class="backgrounds"><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background present" data-background-hash="0../img/jurassic-poop.jpgnullnullnullnullnullnullnull" data-loaded="true" style="display: block;"><div class="slide-background-content" style="background-image: url(&quot;../img/jurassic-poop.jpg&quot;);"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: none;"></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.5);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Actual footage of a debug session </div></div>
+
+		<script src="./reveal.js_files/reveal.js"></script>
+		<script src="./reveal.js_files/notes.js"></script>
+		<script src="./reveal.js_files/markdown.js"></script>
+		<script src="./reveal.js_files/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	<script src="./reveal.js_files/livereload.js" async="" defer=""></script>
+
+</body></html>
