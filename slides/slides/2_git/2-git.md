@@ -386,8 +386,8 @@ for (int i = 0; i < 10; i++)
 1. Create a file 'bar.txt', **add** and **commit**
 2. What do **status** look like?
 3. What do **log -p** show?
-4. Note which name appears the most on the enrollment list
-5. Add name to 'bar.txt' and **add** it
+4. Guess which name appears the most on the enrollment list for today
+5. Add that name to 'bar.txt' and **add** it
 6. Amend these changes by **commit --amend**
 7. Check **log p**
 8. Try amending againg, what happens?
