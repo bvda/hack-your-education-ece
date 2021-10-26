@@ -9,8 +9,8 @@ namespace FizzBuzz
     {
         static void Main(string[] args)
         {
-            var FizzBuzz = new FizzBuzz03();
-            FizzBuzz.Print(FizzBuzz.Calculate(0, 100));
+            var FizzBuzz = new FizzBuzz02();
+            FizzBuzz.Print(FizzBuzz.Calculate(100));
         }
     }
 }

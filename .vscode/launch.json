@@ -13,9 +13,9 @@
       "request": "launch",
       "preLaunchTask": "build",
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/code/problems/heartstone/main/bin/Debug/net5.0/main.dll",
+      "program": "${workspaceFolder}/code/debugging/FizzBuzz/bin/Debug/net5.0/fizzbuzz.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/code/problems/heartstone/main",
+      "cwd": "${workspaceFolder}/code/debugging/FizzBuzz",
       // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
       "console": "internalConsole",
       "stopAtEntry": false
