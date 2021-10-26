@@ -49,10 +49,11 @@
 			<section>
 				<h2>FizzBuzz</h2>
 				<ul>
-					<li><mark>FR1.1</mark>—Any number divisible by three (3) shall be replaced with "fizz"</li>
-					<li><mark>FR1.2</mark>—Any number divisible by five (5) shall be replaced with "buzz"</li>
-					<li><mark>FR1.3</mark>—Any number divisible by fifteen (15) shall be replaced with "FizzBuzz"</li>
-					<li><mark>FR1.4</mark>—Output for each shall be printed on a separate line</li>
+					<li><mark>FR1</mark>—Any value divisible by three (3) shall be replaced with "fizz"</li>
+					<li><mark>FR2</mark>—Any value divisible by five (5) shall be replaced with "buzz"</li>
+					<li><mark>FR3</mark>—Any value divisible by fifteen (15) shall be replaced with "FizzBuzz"</li>
+					<li><mark>FR4</mark>—Output for each value shall be printed on a separate line</li>
+					<li><mark>FR5</mark>—Output shall be persisted in a file called "FizzBuzz.log"</li>
 				</ul>
 			</section>
 			<section>
@@ -103,8 +104,8 @@
 				<aside class="notes">
 					<h2>Simple errors</h2>
 					<ul>
-						<li>Print() not implemented in FizzBuzz01 (declared in IFizzBuzz01.cs)</li>
-						<li>Missing start parameter in Program (method declaration Calculate(int start, int end))</li>
+						<li>Print() implementation in Program.cs uses Console.Write (should be Console.WriteLine)</li>
+						<li>IList<string> result in Calculate() is uninitialized</li>
 					</ul>
 				</aside>
 			</section>
