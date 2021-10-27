@@ -9,26 +9,26 @@ namespace FizzBuzz
   class FizzBuzz04 : IFizzBuzz04
   {
     public FizzBuzz04() { }
-    public IEnumerable<string> Calculate(int start, int end)
+    public IEnumerable<string> Calculate(int start, int end, int fizz = 3, int buzz = 5)
     {
       IEnumerable<int> range = Enumerable.Range(0, end);
       IList<string> result = new List<string>();
       foreach (var i in range)
       {
         string value = "";
-        if (i % 3 != 0 && i % 5 != 0)
+        if (i % fizz != 0 && i % buzz != 0)
         {
           value = i.ToString();
         }
-        else if (i % 3 == 0)
+        else if (i % fizz == 0)
         {
           value = "Fizz";
         }
-        else if (i % 5 == 0)
+        else if (i % fizz == 0)
         {
           value = "Buzz";
         }
-        else if (i % 3 == 0 && i % 5 == 0)
+        else if (i % fizz == 0 && i % buzz == 0)
         {
           value = "FizzBuzz";
         }
