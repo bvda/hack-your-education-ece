@@ -5,12 +5,12 @@ using System.Linq;
 
 namespace FizzBuzz
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            var fb = new FizzBuzz01();
-            var result = fb.Calculate(100);
-        }
+      var fb = new FizzBuzz01();
+      var result = fb.Calculate(100);
     }
+  }
 }
