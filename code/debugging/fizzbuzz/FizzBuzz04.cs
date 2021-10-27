@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace FizzBuzz
 {
-    class FizzBuzz03: IFizzBuzz03 
+    class FizzBuzz04: IFizzBuzz04
     {
         public FizzBuzz03() { }
         public IEnumerable<string> Calculate(int start, int end)
