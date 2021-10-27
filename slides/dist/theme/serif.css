@@ -4,6 +4,29 @@
  *
  * This theme is Copyright (C) 2012-2013 Owen Versteeg, http://owenversteeg.com - it is MIT licensed.
  */
+li {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+code {
+  font-family: monospace;
+  background-color: black;
+  color: lightgray;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+ul ul li {
+  margin-bottom: 10px;
+}
+
+mark {
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .reveal a {
   line-height: 1.3em;
 }

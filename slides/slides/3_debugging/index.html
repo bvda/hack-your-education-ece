@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Debugging 🐛</title>
 
 		<link rel="stylesheet" href="../../dist/reset.css">
 		<link rel="stylesheet" href="../../dist/reveal.css">
@@ -24,6 +24,7 @@
 								<span>YOUR</span>
 								<span>EDUCATION</span>
 							</div>
+							<span style="display: flex; align-items: center;"><h1 style="margin: 0;">🐛</h1></span>
 						</div>
 					</div>
 				</section>
@@ -37,6 +38,7 @@
 					</figure>
 				</section>
 				<section>
+					<h2>Introduction</h2>
 					<ul>
 						<li>Running the application shows us the <mark>effects</mark> (or <mark>symptoms</mark>) of errors, not the <mark>cause</mark> of errors</li>
 					</ul>
@@ -48,6 +50,7 @@
 			</section>
 			<section>
 				<h2>FizzBuzz</h2>
+				<h4>Requirements</h4>
 				<ul>
 					<li><mark>FR1</mark>—Any value divisible by three (3) shall be replaced with "fizz"</li>
 					<li><mark>FR2</mark>—Any value divisible by five (5) shall be replaced with "buzz"</li>
@@ -116,7 +119,7 @@
 					<li>(🔴) Breakpoints</li>
 					<li>(🎯) Problem simplification</li>
 					<li>(👓) RTFM (Read The <del>Fucking</del> <ins>Fine</ins> Manual)</li>
-					<li>(🦆) Talk to a friend </li>
+					<li>(🦆) Talk to a friend</li>
 					<li>(🚶) Take a walk</li>
 				</ul>	
 			</section>
@@ -152,16 +155,43 @@
 			<section>
 				<h2>Exercise 4</h2>
 				<ul>
-					<li></li>
+					<li>Go to GitHub
+						<ul>
+							<li>Checkout the branch with <code>git checkout fizzbuzz-04</code></li>
+						</ul>
+					</li>
+					<li>Fix the errors, so the program outputs results from Calculate to a file</li>
 				</ul>
+				<aside class="notes" aria-label="notes">
+					<h2>Logical errors</h2>
+					<ul>
+						<li>Add check for 0, </li>
+					</ul>
+				</aside>
 			</section>
 			<section>
 				<h2>Ask questions the smart way</h2>
 				<ul>
-					<li>Describe the symptoms of your problem or bug carefully and clearly.</li>
-					<li>Describe the research you did to try and understand the problem before you asked the question.</li>
-					<li>Describe the diagnostic steps you took to try and pin down the problem yourself before you asked the question.</li>
-					<li>If at all possible, provide a way to reproduce the problem in a controlled environment.</li>
+					<li>Describe the <mark>symptoms</mark> of your problem
+						<ul>
+							<li>Be careful and clear</li>
+						</ul>
+					</li>
+					<li>Describe your own <mark>research</mark>
+						<ul>
+							<li>What did you try to do to understand the problem?</li>
+						</ul>
+					</li>
+					<li>Describe the diagnostic <mark>steps</mark> you took 
+						<ul>
+							<li>What did you do to pin down the problem?</li>
+						</ul>
+					</li>
+					<li>Provide a way to <mark>reproduce</mark> the problem 
+						<ul>
+							<li>In a runnable, controlled environment</li>
+						</ul>
+					</li>
 				</ul>
 			</section>
 			<section data-background-image="../img/swat-briefing.png">
