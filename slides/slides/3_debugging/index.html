@@ -70,7 +70,7 @@
 						</ul>
 					</li>
 				</ul>
-				<aside class="notes">
+				<aside class="notes" aria-label="notes">
 					<h2>Syntax errors</h2>
 					<ul>
 						<li>Print() not implemented in FizzBuzz01 (declared in IFizzBuzz01.cs)</li>
@@ -101,7 +101,7 @@
 						</ul>
 					</li>
 				</ul>
-				<aside class="notes">
+				<aside class="notes" aria-label="notes">
 					<h2>Simple errors</h2>
 					<ul>
 						<li>Print() implementation in Program.cs uses Console.Write (should be Console.WriteLine)</li>
@@ -121,6 +121,25 @@
 				</ul>	
 			</section>
 			<section>
+				<h2>Exercise 3</h2>
+				<ul>
+					<li>Go to GitHub
+						<ul>
+							<li>Checkout the branch with <code>git checkout fizzbuzz-03</code></li>
+						</ul>
+					</li>
+					<li>Fix the errors, so the program outputs results from Calculate to a file</li>
+				</ul>
+				<aside class="notes" aria-label="notes">
+					<h2>Implementation errors</h2>
+					<ul>
+						<li>StreamWriter adds append=true (RTFM) <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter?view=net-5.0">StreamWriter Class (System.IO) | Microsoft Docs</a></li>
+						<li>StreamWriter is inside loop (should be outside)</li>
+						<li>Extract StreamWriter to function for Single Responsibility Priciple</li>
+					</ul>
+				</aside>
+			</section>
+			<section>
 				<h2>Approach</h2>
 				<ul>
 					<li>Reproduce the problem</li>
@@ -128,6 +147,12 @@
 					<li>Apply remedies</li>
 					<li>????</li>
 					<li>Profit</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Exercise 4</h2>
+				<ul>
+					<li></li>
 				</ul>
 			</section>
 			<section>
