@@ -28,6 +28,11 @@ mark {
   padding-right: 10px;
 }
 
+.error {
+  background-color: tomato;
+  color: white;
+}
+
 .reveal a {
   line-height: 1.3em;
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en-us">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
 				<section>
 					<div style="display: flex;">
 						<div style="display: flex; justify-content: center;">
-							<img src="../img/HACK_LOGO.png" width="20%">
+							<img src="../img/HACK_LOGO.png" alt="logo" width="20%">
 							<div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
 								<span>YOUR</span>
 								<span>EDUCATION</span>
@@ -40,7 +40,21 @@
 				<section>
 					<h2>Introduction</h2>
 					<ul>
-						<li>Running the application shows us the <mark>effects</mark> (or <mark>symptoms</mark>) of errors, not the <mark>cause</mark> of errors</li>
+						<li>Debugging is the process of <mark>finding</mark> and <mark>resolving</mark> bugs
+							<ul>
+								<li>Bugs are defects or problems that prevent correct operation</li>
+							</ul>
+						</li>
+						<li>Running the application shows us the <mark>effects</mark> (or <mark>symptoms</mark>) of errors
+							<ul>
+								<li>Not the <mark>cause</mark> of errors</li>
+							</ul>
+						</li>
+						<li>It can be hard to identify and pin down problems
+							<ul>
+								<li>Remember the computer is only doing what it is told</li>
+							</ul>
+						</li>
 					</ul>
 				</section>
 				<section data-background-image="../img/jurassic-poop.jpg">
@@ -62,7 +76,7 @@
 			<section>
 				<h2>Exercise 1</h2>
 				<ul>
-					<li>Go to GitHub<sup>(<a href="https://github.com/bvda/FizzBuzz/tree/fizzbuzz-01">link</a>)</sup>
+					<li>Go to GitHub<sup>(<a href="https://github.com/bvda/FizzBuzz/tree/fizzbuzz-01">https://github.com/bvda/FizzBuzz/tree/fizzbuzz-01</a>)</sup>
 						<ul>
 							<li>Checkout the branch with <code>git checkout fizzbuzz-01</code></li>
 						</ul>
@@ -86,17 +100,34 @@
 			<section>
 				<h2>Classes of errors</h2>
 				<ul>
-					<li>Syntax or type errors—Always caught and reported by the compiler</li>
-					<li>Typos or simple errors—Passes type-check. Easy to fix when identified</li>
-					<li>Implementation errors—</li>
-					<li>Logical errors—</li>
+					<li>Syntax or type errors
+						<ul>
+							<li>Always caught and reported by the compiler</li>
+						</ul>
+					</li>
+					<li>Typos or simple errors
+						<ul>
+							<li>Passes type-check</li>
+							<li>Easy to fix when identified</li>
+						</ul> 
+					</li>
+					<li>Implementation errors
+						<ul>
+							<li>Wrong use of framework</li>
+						</ul>
+					</li>
+					<li>Logical errors
+						<ul>
+							<li>Logically flawed algorithms</li>
+						</ul>
+					</li>
 				</ul>
 			</section>
 			<section>
 				<h2>Exercise 2</h2>
 				<small><mark>FR4</mark>—Output for each value shall be printed on a separate line</small>
 				<ul>
-					<li>Go to GitHub<sup>(<a href="https://github.com/bvda/FizzBuzz/tree/fizzbuzz-02">link</a>)</sup>
+					<li>Go to GitHub<sup>(<a href="https://github.com/bvda/FizzBuzz/tree/fizzbuzz-02">https://github.com/bvda/FizzBuzz/tree/fizzbuzz-02</a>)</sup>
 						<ul>
 							<li>Checkout the branch with <code>git checkout fizzbuzz-02</code></li>
 						</ul>
@@ -131,7 +162,8 @@
 				<h2>Exercise 3</h2>
 				<small><mark>FR5</mark>—Output shall be persisted in a file called "FizzBuzz.log"</small>
 				<ul>
-					<li>Go to GitHub<sup>(<a href="https://github.com/bvda/FizzBuzz/tree/fizzbuzz-03">link</a>)</sup>						<ul>
+					<li>Go to GitHub<sup>(<a href="https://github.com/bvda/FizzBuzz/tree/fizzbuzz-03">https://github.com/bvda/FizzBuzz/tree/fizzbuzz-03</a>)</sup>						
+						<ul>
 							<li>Checkout the branch with <code>git checkout fizzbuzz-03</code></li>
 						</ul>
 					</li>
@@ -156,13 +188,15 @@
 					<li>????</li>
 					<li>Profit</li>
 				</ul>
+				<p class="fragment">Hello 👋, Professor Kirk 😏</p>
 			</section>
 			<section>
 				<h2>Exercise 4</h2>
 				<small><mark>FR3</mark>—Any value divisible by fifteen (15) shall be replaced with "FizzBuzz"</small>
 				<small><mark>FR6</mark>—Users to speficify "Fizz" and "Buzz" values.</small>
 				<ul>
-					<li>Go to GitHub<sup>(<a href="https://github.com/bvda/FizzBuzz/tree/fizzbuzz-04">link</a>)</sup>						<ul>
+					<li>Go to GitHub<sup>(<a href="https://github.com/bvda/FizzBuzz/tree/fizzbuzz-04">https://github.com/bvda/FizzBuzz/tree/fizzbuzz-04</a>)</sup>						
+						<ul>
 							<li>Checkout the branch with <code>git checkout fizzbuzz-04</code></li>
 						</ul>
 					</li>
@@ -199,6 +233,28 @@
 					<li>Provide a way to <mark>reproduce</mark> the problem 
 						<ul>
 							<li>In a runnable, controlled environment</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Wrap-up</h2>
+				<ul>
+					<li>Identification 
+						<ul>
+							<li>What is the error type?</li>
+						</ul>
+					</li>
+					<li>Resolution
+						<ul>
+							<li>Reproduction</li>
+							<li>Reduction</li>
+						</ul>
+					</li>
+					<li>Miscellaneous
+						<ul>
+							<li>Ask questions the smart way</li>
+							<li>Treat <mark>Warnings</mark> as <mark class="error">Errors</mark></li>
 						</ul>
 					</li>
 				</ul>

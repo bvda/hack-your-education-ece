@@ -27,6 +27,11 @@ mark {
   padding-right: 10px;
 }
 
+.error {
+  background-color: tomato;
+  color: white;
+}
+
 /**
  * Solarized colors by Ethan Schoonover
  */

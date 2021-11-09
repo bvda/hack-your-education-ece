@@ -1,4 +1,0 @@
-/Users/bvd/Workspace/hack-your-cs-education/code/scripting/data/1.txt
-/Users/bvd/Workspace/hack-your-cs-education/code/scripting/data/2.txt
-/Users/bvd/Workspace/hack-your-cs-education/code/scripting/data/3.txt
-/Users/bvd/Workspace/hack-your-cs-education/code/scripting/data/4.txt
