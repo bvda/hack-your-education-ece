@@ -7,7 +7,7 @@ foreach($file in Get-ChildItem) {
 }
 
 # Write file content to out_file
-$out_file = New-Item -Path '../out_file.txt' -Force
+$out_file = New-Item -Path '../out/out_file.txt' -Force
 foreach($file in Get-ChildItem) {
   Get-Content $file | Out-File -Path $out_file -Append
 }
