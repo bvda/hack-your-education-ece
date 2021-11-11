@@ -19,7 +19,7 @@
 				<section>
 					<div style="display: flex;">
 						<div style="display: flex; justify-content: center;">
-							<img src="../img/HACK_LOGO.png" width="20%">
+							<img src="../img/HACK_LOGO.png" width="20%" alt="logo">
 							<div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
 								<span>YOUR</span>
 								<span>EDUCATION</span>
@@ -32,15 +32,16 @@
 					<h2>What is scripting?</h2>
 					<ul>
 						<li>Automation of processes at application level</li>
-						<li>Short, simple programs</li>
+						<li>Short, simple programs that perform a specific task</li>
 						<li>Usually runs in a shell which has a command-line interpreter (CLI)
 							<ul>
-								<li>bash (Bourne shell)</li>
-								<li>pwsd</li>
+								<li>Bourne shell (bash)</li>
+								<li>Command Prompt (cmd.exe)</li>
 								<li>Z shell (zsh)</li>
 								<li>PowerShell (pwsh)</li>
 							</ul>
 						</li>
+						<li>Can be written directly in the CLI or to files</li>
 					</ul>
 				</section>
 				<section>
@@ -80,7 +81,7 @@
 							</ul>
 						</li>
 						<li>Accepts and returns .NET objects</li>
-						<li>Aligns well with the stack we use at our department</li>
+						<li>Aligns well with the technology stack we use at our department</li>
 					</ul>
 					<aside class="notes" aria-label="notes">
 						<h4>References</h4>
@@ -97,7 +98,14 @@
 								<li>These are called <em>cmdlets</em> (pronounced as "command-lets")</li>
 							</ul>
 						</li>
-						<li><code>$PSVersionTable</code>—</li>
+						<li>Some <code>cmdlets</code> examples
+							<ul>
+								<li><code>Write-Host</code>—prints text to the console<sup>(<a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-host?view=powershell-7.2">docs</a>)</sup></li>
+								<li><code>Write-Output</code>–writes specified objects to the pipeline<sup>(<a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-output?view=powershell-7.2">docs</a>)</sup></li>
+								<li><code>Set-Location</code>–set the working directory to the specified location<sup>(<a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-location?view=powershell-7.2">docs</a>)</sup></li>
+								<li><code>Get-ChildItem</code>–gets the items and child items in one or more specified location<sup>(<a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7.2">docs</a>)</sup></li>
+							</ul>
+						</li>
 					</ul>
 				</section>
 				<section>
