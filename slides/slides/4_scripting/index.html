@@ -32,13 +32,23 @@
 					<h2>What is scripting?</h2>
 					<ul>
 						<li>Automation of processes at application level</li>
+						<li>Short, simple programs</li>
+						<li>Usually runs in a shell which has a command-line interpreter (CLI)
+							<ul>
+								<li>bash (Bourne shell)</li>
+								<li>pwsd</li>
+								<li>Z shell (zsh)</li>
+								<li>PowerShell (pwsh)</li>
+							</ul>
+						</li>
 					</ul>
 				</section>
 				<section>
 					<h2>Use cases</h2>
 					<ul>
-						<li>Automate a specific task in a program</li>
+						<li>Automate a specific task</li>
 						<li>Extract information from a dataset</li>
+						<li>Build and deploy software</li>
 					</ul>
 				</section>
 				<section>
@@ -69,7 +79,8 @@
 								<li>Configuration management framework</li>
 							</ul>
 						</li>
-						<li>Aligns well with the stack we use at our deparment</li>
+						<li>Accepts and returns .NET objects</li>
+						<li>Aligns well with the stack we use at our department</li>
 					</ul>
 					<aside class="notes" aria-label="notes">
 						<h4>References</h4>
@@ -77,6 +88,68 @@
 							<li><a href="https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.1">What is PowerShell? - PowerShell | Microsoft Docs</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section>
+					<h2>Powershell commands</h2>
+					<ul>
+						<li>Powershell comes with hundreds of preinstalled commands
+							<ul>
+								<li>These are called <em>cmdlets</em> (pronounced as "command-lets")</li>
+							</ul>
+						</li>
+						<li><code>$PSVersionTable</code>—</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Hello World</h2>
+					<pre><code class="powershell" data-line-numbers data-trim data-noescape><script type="text/template">
+						Write-Host "Hello 👋, Professor Kirk! 😏"
+					</script>
+					</code></pre>
+				</section>
+				<section>
+					<h2>List files in folder</h2>
+					<pre><code class="powershell"  data-line-numbers data-trim data-noescape><script type="text/template">
+						Set-Location -Path <YOUR_PATH>
+						foreach($file in Get-ChildItem) {
+							Write-Host $file
+						}
+					</script>
+				</code></pre>
+				</section>
+				<section>
+					<h2>Merge files</h2>
+					<pre><code class="powershell"  data-line-numbers data-trim data-noescape><script type="text/template">
+						Set-Location -Path <YOUR_PATH>
+						$result_base = New-Object System.Collections.ArrayList
+						foreach($file in Get-ChildItem) {
+							$json = Get-Content $file | ConvertFrom-Json
+							foreach($person in $json) {
+								$result_base.Add($person)
+							}
+						}
+						$result_base | ConvertTo-Json | Out-File 'merged.json'
+					</script>
+					</code></pre>
+				</section>
+				<section>
+					<h2>Wrap-up</h2>
+					<ul>
+						<li>Scripting can be applied to a lot of problems</li>
+						<li>It can help prevent human errors</li>
+						<li>Things to consider
+							<ul>
+								<li>How often am i going to do this task?</li>
+								<li>It is worth the time investment?</li>
+							</ul>
+						</li>
+						<li>Learn the basics
+							<ul>
+								<li>Pick the rest up as you go</li>
+								<li>Be careful not to fall into the rabbit hole!</li>
+							</ul>
+						</li>
+					</ul>
 				</section>
 				<section>
 					https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-host?view=powershell-7.2
