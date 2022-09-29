@@ -423,7 +423,7 @@ for (int i = 0; i < 10; i++)
 4. Note which name you think appears the most on the enrollment list for this talk
 5. Add name to 'bar.txt' and stage it
 6. Amend these changes by **commit --amend**
-7. Check **log p**
+7. Check **log -p**
 8. Try amending againg, what happens?
 
 ---
