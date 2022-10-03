@@ -73,7 +73,7 @@ Locally on console
 ```shell
 $ git init
 ## later attach a remote repository
-$ git add remote origin https://GitHub.com/hkirk/FaceSite
+$ git add remote origin https://github.com/hkirk/FaceSite
 ```
 
 ----
@@ -156,6 +156,13 @@ $ git remote add origin git@github.com:Henrik-Personal/GitLecture.git
 $ git push --set-upstream origin main
 ```
 
+----
+
+### Exercise
+
+1. Go to github.com and search for `hkirk/gitlecture`
+2. Make a personal fork of the lecture
+3. Clone the project to you local pc (command line or using Github Desktop)
 
 ---
 
@@ -482,7 +489,7 @@ Note: if you share access to a private repository pull request is no nessesary -
 
 ## References:
 
-* [A Visual Git Reference](http://marklodato.GitHub.io/visual-git-guide/index-en.html)
+* [A Visual Git Reference](http://marklodato.github.io/visual-git-guide/index-en.html)
 * [Git as a game](https://ohmygit.org/)
 
 
