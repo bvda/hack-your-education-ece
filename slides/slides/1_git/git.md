@@ -2,7 +2,7 @@
 <!-- .slide: data-background="#003d73" -->
 ## Git + GitHub
 
-![AU Logo](./../img/HACK_LOGO.png "AU Logo") <!-- .element style="width: 200px; position: absolute; top: 200px; left: 50px" -->
+![AU Logo](./../img/HACK_LOGO.png "AU Logo") <!-- .element style="position: absolute; top: 200px; left: 50px" -->
 
 ----
 
@@ -11,6 +11,7 @@
 * What is Git & GitHub
 * How do I use Git & GitHub
 * Lots of work
+* Slides and code: https://github.com/ECE-Henrik/hack-your-education-e21
 
 ---
 
@@ -237,10 +238,10 @@ A --- B ---- C --- D main
 1. What does **status** and **log** say in GitLecture?
 2. Create a file 'plan.txt' and **add** to staging
 3. Check *status*
-4. **Stage** and **commit** and check **status**
+4. **add** and **commit** and check **status**
 5. Change content of 'plan.txt'
 6. Check **status**, 
-7. Then *stage* and **commit** 
+7. Then **add** and **commit** 
 7. How does the **log** look now?
 
 ---
@@ -303,7 +304,7 @@ A --- B --- C --- F (HEAD / main)
 3. Switch to the new branch and watch what the **status** displays now
 4. How do you workspace now look?
 5. Create a new file 'file.txt' containing you name
-6. **Stage** file and commit, check **log**
+6. **Add** file and commit, check **log**
 7. Switch back to the main branch
 8. Create a file 'file2.txt' with some code
 9. Add a commit file and check **log**
@@ -354,7 +355,7 @@ Note:
 
 1. Create a **branch** 'uppercase' and check this out.
 2. Edit the file greeting.txt and make an uppercase greeting
-3. **Stage** the file and **commit**. Check **log** with **--oneline --graph --all**
+3. **Stage** the file and **commit**. Check **log** with **`--oneline --graph --all`**
 4. Checkout the 'main' branch
 5. Check content of greeting.txt with `$ cat greeting.txt` or in an text editor
 6. What is the **diff**erence between branches 'uppercase' into 'main'
@@ -403,11 +404,11 @@ for (int i = 0; i < 10; i++)
 ### Exercise
 ##### working with conflicts
 
-1. **merge** the branch 'conflicting-greetings' 
+1. **merge** the branch 'origin/conflicting-greeting' 
 2. Use **status** to show changes
 3. Use an editor to fix the conflicts
 4. **status** also show instructions for how to resolve conflicts
-5. What do **log --oneline --graph** show now?
+5. What do **'log --oneline --graph --all'** show now?
 
 ---
 
@@ -424,10 +425,10 @@ for (int i = 0; i < 10; i++)
 ### Exercise
 ##### using amend
 
-1. Create a file 'bar.txt', **stage** and **commit**
+1. Create a file 'bar.txt', **add** and **commit**
 2. What do **status** look like?
 3. What do **log -p** show?
-4. Note which name you think appears the most on the enrollment list for this talk
+4. Note which name you think appears the most on the enrollment list for today
 5. Add name to 'bar.txt' and stage it
 6. Amend these changes by **commit --amend**
 7. Check **log -p**
@@ -484,6 +485,8 @@ Note: if you share access to a private repository pull request is no nessesary -
 
 1. **push** your changes on the branches 'main' and '[initials]-branch' to your GitHub account
 2. Create a pull request to 'hkirk/GitLecture'
+
+Optional: (https://github.com/ECE-Henrik/hack-your-education-e21)[https://github.com/ECE-Henrik/hack-your-education-e21]
 
 ---
 
