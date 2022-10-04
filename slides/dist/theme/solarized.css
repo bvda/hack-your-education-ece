@@ -4,6 +4,34 @@
  */
 @import url(./fonts/league-gothic/league-gothic.css);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+li {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+code {
+  font-family: monospace;
+  background-color: black;
+  color: lightgray;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+ul ul li {
+  margin-bottom: 10px;
+}
+
+mark {
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.error {
+  background-color: tomato;
+  color: white;
+}
+
 /**
  * Solarized colors by Ethan Schoonover
  */

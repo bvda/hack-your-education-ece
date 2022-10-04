@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Debugging 🐛</title>
+
+		<link rel="stylesheet" href="../../dist/reset.css">
+		<link rel="stylesheet" href="../../dist/reveal.css">
+		<link rel="stylesheet" href="../../dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<div style="display: flex;">
+						<div style="display: flex; justify-content: center;">
+							<img src="../img/HACK_LOGO.png" alt="logo" width="20%">
+							<div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
+								<span>YOUR</span>
+								<span>EDUCATION</span>
+							</div>
+							<span style="display: flex; align-items: center;"><h1 style="margin: 0;">🐛</h1></span>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>What is debugging?</h2>
+					<figure>
+						<blockquote cite="https://twitter.com/fortes/status/399339918213652480?lang=en">
+							<p>Debugging is like being the detective in a crime movie where you are also the murderer.</p>
+							<figcaption>—Filipe Fortes, <cite>Twitter, Nov. 2013</cite></figcaption>
+						</blockquote>
+					</figure>
+				</section>
+				<section>
+					<h2>Introduction</h2>
+					<ul>
+						<li>Debugging is the process of <mark>finding</mark> and <mark>resolving</mark> bugs
+							<ul>
+								<li>Bugs are defects or problems that prevent correct operation</li>
+							</ul>
+						</li>
+						<li>Running the application shows us the <mark>effects</mark> (or <mark>symptoms</mark>) of errors
+							<ul>
+								<li>Not the <mark>cause</mark> of errors</li>
+							</ul>
+						</li>
+						<li>It can be hard to identify and pin down problems
+							<ul>
+								<li>Remember the computer is only doing what it is told</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section data-background-image="../img/jurassic-poop.jpg">
+				<h3>Actual footage</h3>
+				<h4>of a</h4>
+				<h3>debug session</h3>
+			</section>
+			<section>
+				<h2>FizzBuzz</h2>
+				<h4>Requirements</h4>
+				<ul>
+					<li><mark>FR1</mark>—Any value divisible by three (3) shall be replaced with "fizz"</li>
+					<li><mark>FR2</mark>—Any value divisible by five (5) shall be replaced with "buzz"</li>
+					<li><mark>FR3</mark>—Any value divisible by fifteen (15) shall be replaced with "FizzBuzz"</li>
+					<li><mark>FR4</mark>—Output for each value shall be printed on a separate line</li>
+					<li><mark>FR5</mark>—Output shall be persisted in a file called "FizzBuzz.log"</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Exercise 1</h2>
+				<ul>
+					<li>Go to GitHub<sup>(<a href="https://github.com/bvda/FizzBuzz/tree/fizzbuzz-01">https://github.com/bvda/FizzBuzz/tree/fizzbuzz-01</a>)</sup>
+						<ul>
+							<li>Checkout the branch with <code>git checkout fizzbuzz-01</code></li>
+						</ul>
+					</li>
+					<li>Fix the errors, so the program is runnable
+						<ul>
+							<li>What was the type of errors?</li>
+							<li>How did you find them?</li>
+						</ul>
+					</li>
+				</ul>
+				<aside class="notes" aria-label="notes">
+					<h2>Syntax errors</h2>
+					<ul>
+						<li>Print() not implemented in FizzBuzz01 (declared in IFizzBuzz01.cs)</li>
+						<li>Missing start parameter in Program (method declaration Calculate(int start, int end))</li>
+						<li>Missing semicolon in print "fizz"</li>
+					</ul>
+				</aside>
+			</section>
+			<section>
+				<h2>Classes of errors</h2>
+				<ul>
+					<li>Syntax or type errors
+						<ul>
+							<li>Always caught and reported by the compiler</li>
+						</ul>
+					</li>
+					<li>Typos or simple errors
+						<ul>
+							<li>Passes type-check</li>
+							<li>Easy to fix when identified</li>
+						</ul> 
+					</li>
+					<li>Implementation errors
+						<ul>
+							<li>Wrong use of framework</li>
+						</ul>
+					</li>
+					<li>Logical errors
+						<ul>
+							<li>Logically flawed algorithms</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Exercise 2</h2>
+				<small><mark>FR4</mark>—Output for each value shall be printed on a separate line</small>
+				<ul>
+					<li>Go to GitHub<sup>(<a href="https://github.com/bvda/FizzBuzz/tree/fizzbuzz-02">https://github.com/bvda/FizzBuzz/tree/fizzbuzz-02</a>)</sup>
+						<ul>
+							<li>Checkout the branch with <code>git checkout fizzbuzz-02</code></li>
+						</ul>
+					</li>
+					<li>Fix the errors, so the program is runnable
+						<ul>
+							<li>What was the type of errors?</li>
+						</ul>
+					</li>
+					<li>Fix the bugs, so the program fulfills <mark>FR4</mark></li>
+				</ul>
+				<aside class="notes" aria-label="notes">
+					<h2>Simple errors</h2>
+					<ul>
+						<li>Print() implementation in Program.cs uses Console.Write (should be Console.WriteLine)</li>
+						<li>IList<string> result in Calculate() is uninitialized (NullPointerException)</li>
+					</ul>
+				</aside>
+			</section>
+			<section>
+				<h2>Toolbox</h2>
+				<ul>
+					<li>(🪵) Logging</li>
+					<li>(🔴) Breakpoints</li>
+					<li>(🎯) Problem simplification</li>
+					<li>(👓) RTFM (Read The <del>Fucking</del> <ins>Fine</ins> Manual)</li>
+					<li>(🦆) Talk to a friend</li>
+					<li>(🚶) Take a walk</li>
+				</ul>	
+			</section>
+			<section>
+				<h2>Exercise 3</h2>
+				<small><mark>FR5</mark>—Output shall be persisted in a file called "FizzBuzz.log"</small>
+				<ul>
+					<li>Go to GitHub<sup>(<a href="https://github.com/bvda/FizzBuzz/tree/fizzbuzz-03">https://github.com/bvda/FizzBuzz/tree/fizzbuzz-03</a>)</sup>						
+						<ul>
+							<li>Checkout the branch with <code>git checkout fizzbuzz-03</code></li>
+						</ul>
+					</li>
+					<li>Fix the bugs, so the program fulfills <mark>FR5</mark></li>
+					<li>Clean up the code</li>
+				</ul>
+				<aside class="notes" aria-label="notes">
+					<h2>Implementation errors</h2>
+					<ul>
+						<li>StreamWriter adds append=true (RTFM) <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter?view=net-5.0">StreamWriter Class (System.IO) | Microsoft Docs</a></li>
+						<li>StreamWriter is inside loop (should be outside)</li>
+						<li>Extract StreamWriter to function for Single Responsibility Priciple</li>
+					</ul>
+				</aside>
+			</section>
+			<section>
+				<h2>Approach</h2>
+				<ul>
+					<li>Reproduce the problem</li>
+					<li>Reduce the problem</li>
+					<li>Apply tools</li>
+					<li>????</li>
+					<li>Profit</li>
+				</ul>
+				<p class="fragment">Hello 👋, Professor Kirk 😏</p>
+			</section>
+			<section>
+				<h2>Exercise 4</h2>
+				<small><mark>FR3</mark>—Any value divisible by fifteen (15) shall be replaced with "FizzBuzz"</small>
+				<small><mark>FR6</mark>—Users to speficify "Fizz" and "Buzz" values.</small>
+				<ul>
+					<li>Go to GitHub<sup>(<a href="https://github.com/bvda/FizzBuzz/tree/fizzbuzz-04">https://github.com/bvda/FizzBuzz/tree/fizzbuzz-04</a>)</sup>						
+						<ul>
+							<li>Checkout the branch with <code>git checkout fizzbuzz-04</code></li>
+						</ul>
+					</li>
+					<li>Fix the errors, so the program fulfills <mark>FR3</mark></li>
+					<li>Implement <mark>FR6</mark></li>
+				</ul>
+				<aside class="notes" aria-label="notes">
+					<h2>Logical errors</h2>
+					<ul>
+						<li>Move "FizzBuzz" clause to the top (currently at the bottom)</li>
+						<li>Fix parameter "fizz" in else if for "Buzz"</li>
+						<li>Add start to Enumerator (is hardcoded to 0)</li>
+					</ul>
+				</aside>
+			</section>
+			<section>
+				<h2>Ask questions the smart way</h2>
+				<ul>
+					<li>Describe the <mark>symptoms</mark> of your problem
+						<ul>
+							<li>Be careful and clear</li>
+						</ul>
+					</li>
+					<li>Describe your own <mark>research</mark>
+						<ul>
+							<li>What did you try to do to understand the problem?</li>
+						</ul>
+					</li>
+					<li>Describe the diagnostic <mark>steps</mark> you took 
+						<ul>
+							<li>What did you do to pin down the problem?</li>
+						</ul>
+					</li>
+					<li>Provide a way to <mark>reproduce</mark> the problem 
+						<ul>
+							<li>In a runnable, controlled environment</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Wrap-up</h2>
+				<ul>
+					<li>Identification 
+						<ul>
+							<li>What is the error type?</li>
+						</ul>
+					</li>
+					<li>Resolution
+						<ul>
+							<li>Reproduction</li>
+							<li>Reduction</li>
+						</ul>
+					</li>
+					<li>Miscellaneous
+						<ul>
+							<li>Ask questions the smart way</li>
+							<li>Treat <mark>Warnings</mark> as <mark class="error">Errors</mark></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section data-background-image="../img/swat-briefing.png">
+				<h3>HYE participants</h3>
+				<h4>arriving at</h4>
+				<h3>a crime scene</h3>
+			</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/notes/notes.js"></script>
+		<script src="../../plugin/markdown/markdown.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

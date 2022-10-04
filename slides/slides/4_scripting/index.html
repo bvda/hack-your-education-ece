@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Scripting 📝</title>
+
+		<link rel="stylesheet" href="../../dist/reset.css">
+		<link rel="stylesheet" href="../../dist/reveal.css">
+		<link rel="stylesheet" href="../../dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<div style="display: flex;">
+						<div style="display: flex; justify-content: center;">
+							<img src="../img/HACK_LOGO.png" width="20%" alt="logo">
+							<div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
+								<span>YOUR</span>
+								<span>EDUCATION</span>
+							</div>
+							<span style="display: flex; align-items: center;"><h1 style="margin: 0;">📝</h1></span>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>What is scripting?</h2>
+					<ul>
+						<li>Automation of processes at application level</li>
+						<li>Short, simple programs that perform a specific task</li>
+						<li>Usually runs in a shell which has a command-line interpreter (CLI)
+							<ul>
+								<li>Bourne shell (bash)</li>
+								<li>Command Prompt (cmd.exe)</li>
+								<li>Z shell (zsh)</li>
+								<li>PowerShell (pwsh)</li>
+							</ul>
+						</li>
+						<li>Can be written directly in the CLI or to files</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Use cases</h2>
+					<ul>
+						<li>Automate a specific task</li>
+						<li>Extract information from a dataset</li>
+						<li>Build and deploy software</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Scripting languages</h2>
+					<ul>
+						<li>All scripting languages are programming languages
+							<ul>
+								<li>...but not all programming languages are scripting languages</li>
+							</ul>
+						</li>
+						<li>Examples of scripting languages
+							<ul>
+								<li>Bash</li>
+								<li>Powershell</li>
+								<li>JavaScript</li>
+								<li>Python</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Powershell</h2>
+					<ul>
+						<li>Cross platform task automation solution
+							<ul>
+								<li>Command-line shell</li>
+								<li>Scripting languages</li>
+								<li>Configuration management framework</li>
+							</ul>
+						</li>
+						<li>Accepts and returns .NET objects</li>
+						<li>Aligns well with the technology stack we use at our department</li>
+					</ul>
+					<aside class="notes" aria-label="notes">
+						<h4>References</h4>
+						<ul>
+							<li><a href="https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.1">What is PowerShell? - PowerShell | Microsoft Docs</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section>
+					<h2>Powershell commands</h2>
+					<ul>
+						<li>Powershell comes with hundreds of preinstalled commands
+							<ul>
+								<li>These are called <em>cmdlets</em> (pronounced as "command-lets")</li>
+							</ul>
+						</li>
+						<li>Some <code>cmdlets</code> examples
+							<ul>
+								<li><code>Write-Host</code>—prints text to the console<sup>(<a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-host?view=powershell-7.2">docs</a>)</sup></li>
+								<li><code>Write-Output</code>–writes specified objects to the pipeline<sup>(<a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-output?view=powershell-7.2">docs</a>)</sup></li>
+								<li><code>Set-Location</code>–set the working directory to the specified location<sup>(<a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-location?view=powershell-7.2">docs</a>)</sup></li>
+								<li><code>Get-ChildItem</code>–gets the items and child items in one or more specified location<sup>(<a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7.2">docs</a>)</sup></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Hello World</h2>
+					<pre><code class="powershell" data-line-numbers data-trim data-noescape><script type="text/template">
+						Write-Host "Hello 👋, Professor Kirk! 😏"
+					</script>
+					</code></pre>
+				</section>
+				<section>
+					<h2>List files in folder</h2>
+					<pre><code class="powershell"  data-line-numbers data-trim data-noescape><script type="text/template">
+						Set-Location -Path <YOUR_PATH>
+						foreach($file in Get-ChildItem) {
+							Write-Host $file
+						}
+					</script>
+				</code></pre>
+				</section>
+				<section>
+					<h2>Merge files</h2>
+					<pre><code class="powershell"  data-line-numbers data-trim data-noescape><script type="text/template">
+						Set-Location -Path <YOUR_PATH>
+						$result_base = New-Object System.Collections.ArrayList
+						foreach($file in Get-ChildItem) {
+							$json = Get-Content $file | ConvertFrom-Json
+							foreach($person in $json) {
+								$result_base.Add($person)
+							}
+						}
+						$result_base | ConvertTo-Json | Out-File 'merged.json'
+					</script>
+					</code></pre>
+				</section>
+				<section>
+					<h2>Is it worth the time?</h2>
+						<img src="../img//is_it_worth_the_time.png" alt="xkcd-1205">
+						<aside class="notes" aria-label="notes">
+							<h4>References</h4>
+							<ul>
+								<li><a href="https://xkcd.com/1205/">xkcd: Is It Worth the Time?</a></li>
+							</ul>
+						</aside>
+				</section>
+				<section>
+					<h2>Wrap-up</h2>
+					<ul>
+						<li>Scripting can be applied to a lot of problems</li>
+						<li>It can help prevent human errors</li>
+						<li>Things to consider
+							<ul>
+								<li>How often am i going to do this task?</li>
+								<li>It is worth the time investment?</li>
+							</ul>
+						</li>
+						<li>Learn the basics
+							<ul>
+								<li>Pick the rest up as you go</li>
+								<li>Be careful not to fall into the rabbit hole!</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-host?view=powershell-7.2
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/notes/notes.js"></script>
+		<script src="../../plugin/markdown/markdown.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

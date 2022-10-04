@@ -1,6 +1,6 @@
 
 <!-- .slide: data-background="#003d73" -->
-## Git + Github
+## Git + GitHub
 
 ![AU Logo](./../img/HACK_LOGO.png "AU Logo") <!-- .element style="position: absolute; top: 200px; left: 50px" -->
 
@@ -8,21 +8,20 @@
 
 ## Agenda
 
-* What is Git & Github
-* How do I use Git & Github
+* What is Git & GitHub
+* How do I use Git & GitHub
 * Lots of work
 * Slides and code: https://github.com/ECE-Henrik/hack-your-education-e21
 
 ---
 
-## Git and Github Desktop install
+## Git and GitHub Desktop install
 
 * Windows (https://git-scm.com/download/win)
 * Mac (https://git-scm.com/download/mac)
 * Linux (apt): sudo apt-get install git
 * Linux (yum): sudo yum install git
-
-* Github for Desktop
+* *Optional*: GitHub Desktop
 
 ----
 
@@ -56,35 +55,34 @@
 
 ----
 
-### What is Github
+### What is GitHub
 
 * Place to host and share repositories
 * Create an account on [www.github.com](http://www.github.com)
     * Free with limits
-* On top of Git
+* On top of git
     * UI, documentation, bug tracking, feature request, pull request
-* Github is one platform:
+* GitHub is one platform:
     * Bitbucket, GitLab etc. are alternatives
 
 ---
 
-### Create project on Github
+## Create project localy
 
-![Create project on Github](./img/github-create.png "Create project on Github") <!-- .element: style="height: 600px" -->
+Locally on console
+
+```shell
+$ git init
+## later attach a remote repository
+$ git add remote origin https://github.com/hkirk/FaceSite
+```
 
 ----
 
-### Ignore
-
-![Git ignore templates](./img/gitignore.png "Templates on github")
-
-
-----
-
-### Ignore
+### .gitignore
 
 * Just a file called '.gitignore'
-* Which contains regexp of files to be ignored
+* Which contains 'regexp' of files to be ignored
 
 ```
 .svn
@@ -96,9 +94,21 @@ node_modules/
 
 ----
 
+### or on GitHub
+
+![Create project on GitHub](./img/GitHub-create.png "Create project on GitHub") <!-- .element: style="height: 600px" -->
+
+----
+
+### Ignore
+
+![Git ignore templates](./img/gitignore.png "Templates on GitHub") <!-- .element: style="height: 300px" -->
+
+----
+
 ### Add collaborators
 
-![Manage access](./img/access.png "Manage user access") <!-- .element: style="height: 600px" -->
+![Manage access](./img/access.png "Manage user access") <!-- .element: style="height: 400px" -->
 
 
 ----
@@ -113,63 +123,27 @@ node_modules/
 
 Remember to answer confirmation email
 
-![Mail](./img/confirmation.png "Confirmation email") <!-- .element: style="height: 600px" -->
+![Mail](./img/confirmation.png "Confirmation email") <!-- .element: style="height: 500px" -->
 
 ----
 
-### Create project localy
-
-Or locally on console
-
-```shell
-$ git init
-## later attach a remote repository
-$ git add remote origin https://github.com/hkirk/FaceSite
-```
-
----
-
-### Commit 
-
-* The act of creating a snapshot
-    * and the actually snapshot
-* A repository consists of a series of commits
-* Each commit consists of
-    * Information about how file has changed
-    * Reference to previous commit (parent commit)
-    * A hash code
-
-----
-
-### Repository
-
-* A collection of the files
-* and their history
-* Will live locally and possible also on a remote server
-    * Cloning is the act of copying the content
-* Pulling from a repository
-    * Copying remote changes to local
-* Pushing to a repository
-    * Moving local changes to remote
-
-----
-
-## Cloning repository
+## Fork repository
 
 1. Goto www.github.com/hkirk/GitLecture
-2. Fork this to optain you own copy
-![Fork repository on github](./img/fork.png "Fork on github") <!-- .element: style="height: 150px" -->
-3. 
-
-```shell
-$ git clone git@github.com:hkirk/GitLecture.git
-```
+2. Fork this to optain you own copy on GitHub
+![Fork repository on GitHub](./img/fork.png "Fork on GitHub") <!-- .element: style="height: 150px" -->
 
 ----
 
-### Cloning via Github Desktop
+### 3. Cloning 
 
-or
+Commandline 
+
+```shell
+$ git clone git@github.com:_yourHandle_/GitLecture.git
+```
+
+or via GitHub Desktop
 
 ![Clone](./img/clone.png "Clone repository")
 
@@ -183,6 +157,42 @@ $ git remote add origin git@github.com:Henrik-Personal/GitLecture.git
 $ git push --set-upstream origin main
 ```
 
+----
+
+### Exercise
+
+1. Go to github.com and search for `hkirk/gitlecture`
+2. Make a personal fork of the lecture
+3. Clone the project to you local pc (command line or using Github Desktop)
+
+---
+
+### Repository
+
+* A collection of the files
+* and their history
+* Will exists locally and possible also on a remote server
+    * cloning is the act of copying the content
+* Pulling from a repository
+    * copying remote changes to local
+* Pushing to a repository
+    * moving local changes to remote
+
+----
+
+### Commit 
+
+* The act of creating a snapshot
+    * and the actually snapshot
+* A repository consists of a series of commits
+* Each commit consists of
+    * information about how file has changed
+    * reference to previous commit (parent commit)
+    * a hash code
+
+```
+A --- B ---- C --- D main
+```
 
 ----
 
@@ -222,7 +232,8 @@ $ git push --set-upstream origin main
 
 ----
 
-### Ex.: What is in the directory
+### Exercise
+#### What is in the directory
 
 1. What does **status** and **log** say in GitLecture?
 2. Create a file 'plan.txt' and **add** to staging
@@ -238,34 +249,46 @@ $ git push --set-upstream origin main
 ## Branches
 
 * A commit must 'live' on some branch
-* There can be many parallel branches simultanius
-* The main branch is typically called 'main', 'master' or 'development'
+* There can be many parallel branches simultaneous
+* The main branch is typically called `main`, `master` or `development`
 
 ----
 
-* <!-- .element: class="fragment" --> `HEAD` is the most recent commit on main branch
-* <!-- .element: class="fragment" --> `main` is default the branch
+### Commits
 
-![Branches](./img/head.png "Branches")
+```
+A (a_branch) --- B --- C --- D (HEAD / main)
+```
+
+* <!-- .element: class="fragment" --> `HEAD` is the most recent commit on current branch
+* <!-- .element: class="fragment" --> `main` is the branch
 
 ----
 
 ### Branches
 
-![Multiple branches](./img/branches.png "Branches") <!-- .element: style="height: 400px" -->
+```
+    --- E (login_feature)
+   /
+A --- B --- C --- F (HEAD / main)
+               \
+                --- D --- G --- H (profile_feature)
+```
 
 ----
 
 ### Commands regarding branches
 
-* **checkout [name]**
-    * switches to given branch
-* **checkout -b [name]**
-    * Creates the branch and switches
 * **branch**
+    * Lists all local branches
+* **branch -r**
     * Lists all branches
 * **branch [name]**
     * Creates a new branch
+* **checkout [name]**
+    * switches to given branch
+* **checkout -b [name]**
+    * Creates the branch and switch to new branch
 * **diff [name]**
     * Show differences on current and `[name]` branched
 
@@ -273,7 +296,8 @@ $ git push --set-upstream origin main
 
 <!-- .slide: style="font-size: 0.8em" -->
 
-### Ex. Branching
+### Exercises
+##### Branching
 
 1. Which branch are you on?
 2. Create a new **branch** '[initials]-branch', and show branches
@@ -298,7 +322,10 @@ $ git push --set-upstream origin main
 D---E---F---G  main
 ```
 
-`$ git merge topic` <!-- .element: class="fragment" -->
+```
+$ git merge topic
+```
+<!-- .element: class="fragment" -->
 
 ```
       A---B---C topic
@@ -309,25 +336,29 @@ D---E---F---G---H main
 
 ----
 
-### Merging continued and cleanup
+### Cleanup
 
-* **merge** and **diff**
-    * can handle multiple branches at once
 * **branch -d [name]**
     * Deletes the branch with `[name]`
+
+
+Note: 
+
+**merge** and **diff**  can handle multiple branches at once
 
 ----
 
 <!-- .slide: style="font-size: 0.8em" -->
 
-### Ex. Merging
+### Exercise
+##### Merging
 
-1. Create a branch 'uppercase' and check this out.
+1. Create a **branch** 'uppercase' and check this out.
 2. Edit the file greeting.txt and make an uppercase greeting
-3. **Add** the file and commit. Check **log** with **`--oneline --graph --all`**
+3. **Stage** the file and **commit**. Check **log** with **`--oneline --graph --all`**
 4. Checkout the 'main' branch
-5. Check content of greeting.txt with `cat greeting.txt` or in an editor
-6. What is the **diff**erence between 'uppercase' into 'main'
+5. Check content of greeting.txt with `$ cat greeting.txt` or in an text editor
+6. What is the **diff**erence between branches 'uppercase' into 'main'
 7. Then **merge** 'uppercase' into 'main'
 8. What is the content of greeting.txt now?
 9. Delete the uppercase branch
@@ -356,12 +387,22 @@ for (int i = 0; i < 10; i++)
 * **status** will show unmerge paths
 * Steps:
     1. Manually resolve each file
+        * open file in editor and fix content
     2. **add** add each file to mark resolution
-    * or **merge --abort** to abort merge
+    3. To abord merge **merge --abort**
 
 ----
 
-### Ex. working with conflicts
+### Remove branches
+
+* **switch [name]** 
+    * fecthes and tracks a remote branch
+    * shorthand for **checkout --track [remote]/[name]**
+
+----
+
+### Exercise
+##### working with conflicts
 
 1. **merge** the branch 'origin/conflicting-greeting' 
 2. Use **status** to show changes
@@ -381,22 +422,23 @@ for (int i = 0; i < 10; i++)
 
 ----
 
-### Ex. using amend
+### Exercise
+##### using amend
 
 1. Create a file 'bar.txt', **add** and **commit**
 2. What do **status** look like?
 3. What do **log -p** show?
-4. Guess which name appears the most on the enrollment list for today
-5. Add that name to 'bar.txt' and **add** it
+4. Note which name you think appears the most on the enrollment list for today
+5. Add name to 'bar.txt' and stage it
 6. Amend these changes by **commit --amend**
-7. Check **log p**
+7. Check **log -p**
 8. Try amending againg, what happens?
 
 ---
 
 <!-- .slide: style="font-size: 0.9em" -->
 
-## Sharing on Github
+## Sharing with collaborators
 
 * **push**
     * Pushes current branch to remote
@@ -413,9 +455,10 @@ for (int i = 0; i < 10; i++)
 
 * Forking a repository on GitHub creates a new repository with the same code
     * and a link between these
-* A pull requests is the tool to synchronize the to repositories
+    * you (hopefully) have already done this
+* A pull requests is the mechanism to synchronize the two repositories
 
-**Note** if you share access to a private repository pull request is no nessesary - because there are only one repository.
+Note: if you share access to a private repository pull request is no nessesary - because there are only one repository.
 
 ----
 
@@ -437,9 +480,10 @@ for (int i = 0; i < 10; i++)
 
 ----
 
-### Ex. Working with github
+### Exercise
+##### Working with GitHub
 
-1. **push** your changes on the branches 'main' and '[initials]-branch' to your github account
+1. **push** your changes on the branches 'main' and '[initials]-branch' to your GitHub account
 2. Create a pull request to 'hkirk/GitLecture'
 
 Optional: (https://github.com/ECE-Henrik/hack-your-education-e21)[https://github.com/ECE-Henrik/hack-your-education-e21]
@@ -449,4 +493,6 @@ Optional: (https://github.com/ECE-Henrik/hack-your-education-e21)[https://github
 ## References:
 
 * [A Visual Git Reference](http://marklodato.github.io/visual-git-guide/index-en.html)
+* [Git as a game](https://ohmygit.org/)
+
 
