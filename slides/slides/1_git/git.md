@@ -11,7 +11,7 @@
 * What is Git & GitHub
 * How do I use Git & GitHub
 * Lots of work
-* Slides and code: https://github.com/ECE-Henrik/hack-your-education-e21
+* Slides and code: https://github.com/bvda/hack-your-education-ece
 
 ---
 
@@ -476,7 +476,7 @@ Note: if you share access to a private repository pull request is no nessesary -
 
 ### Updates from main repository
 
-![Update from repo](./img/update-downstream.png "Update from main repositor")
+![Update from repo](./img/update-downstream.png "Update from main repository")
 
 ----
 
@@ -486,7 +486,15 @@ Note: if you share access to a private repository pull request is no nessesary -
 1. **push** your changes on the branches 'main' and '[initials]-branch' to your GitHub account
 2. Create a pull request to 'hkirk/GitLecture'
 
-Optional: (https://github.com/ECE-Henrik/hack-your-education-e21)[https://github.com/ECE-Henrik/hack-your-education-e21]
+---
+
+### Next events
+
+
+* 6. October - Version control **&#9745;**
+* 13. October - Debugging  **&#9744;**
+* 27. October - Problem solving  **&#9744;**
+* 10. November - Scripting  **&#9744;**
 
 ---
 
@@ -494,5 +502,6 @@ Optional: (https://github.com/ECE-Henrik/hack-your-education-e21)[https://github
 
 * [A Visual Git Reference](http://marklodato.github.io/visual-git-guide/index-en.html)
 * [Git as a game](https://ohmygit.org/)
+* [Code and slides on Git](https://github.com/bvda/hack-your-education-ece)
 
 
