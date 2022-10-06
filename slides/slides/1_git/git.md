@@ -67,7 +67,7 @@
 
 ---
 
-## Create project localy
+## Create project locally
 
 Locally on console
 
