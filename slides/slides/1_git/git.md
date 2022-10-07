@@ -1,4 +1,8 @@
 
+<!-- .slide: data-background-image="./img/1st-slide.jpg" -->
+
+----
+
 <!-- .slide: data-background="#003d73" -->
 ## Git + GitHub
 
