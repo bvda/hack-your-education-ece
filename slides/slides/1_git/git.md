@@ -498,6 +498,13 @@ Note: if you share access to a private repository pull request is no nessesary -
 
 ---
 
+### GitHub Education
+
+1. Go to https://education.github.com/students
+2. Sign up with your AU mail
+3. ????
+4. PROFIT!
+
 ## References:
 
 * [A Visual Git Reference](http://marklodato.github.io/visual-git-guide/index-en.html)
