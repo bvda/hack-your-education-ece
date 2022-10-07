@@ -67,7 +67,7 @@
 
 ---
 
-## Create project localy
+## Create project locally
 
 Locally on console
 
@@ -201,7 +201,7 @@ A --- B ---- C --- D main
 * **status**
     * shows which branch you are one (more about branches later)
     * shows working tree information
-    * shows how your branch are compared to remove branch
+    * shows how your branch are compared to remote branch
 * **log**
     * shows you snapshot history
     * *-n*, *--oneline*, *--graph*
