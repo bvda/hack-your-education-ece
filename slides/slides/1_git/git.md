@@ -71,7 +71,7 @@
 
 ---
 
-## Create project localy
+## Create project locally
 
 Locally on console
 
@@ -205,7 +205,7 @@ A --- B ---- C --- D main
 * **status**
     * shows which branch you are one (more about branches later)
     * shows working tree information
-    * shows how your branch are compared to remove branch
+    * shows how your branch are compared to remote branch
 * **log**
     * shows you snapshot history
     * *-n*, *--oneline*, *--graph*
@@ -501,6 +501,13 @@ Note: if you share access to a private repository pull request is no nessesary -
 * 10. November - Scripting  **&#9744;**
 
 ---
+
+### GitHub Education
+
+1. Go to https://education.github.com/students
+2. Sign up with your AU mail
+3. ????
+4. PROFIT!
 
 ## References:
 
