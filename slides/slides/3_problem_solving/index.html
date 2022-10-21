@@ -54,7 +54,14 @@
 				"progress": true,
 				"history": true,
 				"center": true,
-				
+				dependencies: [
+          			{ src: "../../plugin/countdown/countdown.js" },
+		        ],
+				countdown: {
+					playTickSoundLast: 10,
+					tickSound: "http://soundbible.com/grab.php?id=2044&type=mp3",
+					timeIsUpSound: "http://soundbible.com/grab.php?id=1746&type=mp3"
+				},
 				math: {
 				  mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
 				  config: 'TeX-AMS_HTML-full',

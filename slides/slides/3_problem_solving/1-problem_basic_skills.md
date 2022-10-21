@@ -7,140 +7,10 @@
 
 ### TODO Today
 
+* Problem Solving
+* Use cases
 * Basic skills
-* Problem solving
-
----
-
-## Basic skills
-
-What is taught on real courses:
-
-* Programing language
-  * Control flow, methods/function
-  * OORPG, OOP, ITS1, ITS2, Programmering, ..
-* Data structures
-  * List, queue, stack, tree
-  * DOA, Algoritmer og Datastrukure
-* Software architecture & design
-  * SWD, ITS3, Software Architecture, 
-
-----
-
-### Learn you editor?
-
-* Shortcuts ([VS Code](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf), [VS 2019](https://visualstudiomagazine.com/articles/2019/06/06/visual-studio-productivity.aspx), [Rider](https://www.jetbrains.com/help/rider/mastering_keyboard_shortcuts.html))
-* Views
-* Plugins / extensions
-
-
-----
-
-#### C / C++ / C#
-
-* Visual Studio does everything
-  *  But what actually happens?
-*<!-- .element: class="fragment" data-fragment-index="1" --> C & C++ The compiler:
-  * E.g. `GCC`
-*<!-- .element: class="fragment" data-fragment-index="2" --> For C# the compiler is called:
-  * .Net Core: `dotnet build`
-  * .Net: `csc.exe` 
-
-*<!-- .element: class="fragment" data-fragment-index="3" --> Many errors are reported by the compiler
-
-----
-
-#### JavaScript
-
-* JavaScript files can be 'executed' directly in browser.
-*<!-- .element: class="fragment" data-fragment-index="1" --> TypeScript (Superset of JavaScript)
-  * Must be transpiled to JavaScript
-  * Requires a tool chain tools e.g. Gulp
-
-```javascript
-gulp.task('serve', () => {
-    connect.server({
-      root: root, port: port,
-      host: '0.0.0.0', livereload: true
-    })
-
-    gulp.watch(['*.html', '*.md'], gulp.series('reload'))
-    ...
-```
-<!-- .element: class="fragment" data-fragment-index="2" -->
-
-----
-
-### Toolchains
-
-* Do you use any other tools?
-    * Cross compilation, linting, obfuscating, etc.?
-    * Are errors coming from these?
-
-----
-
-### What is good code?
-
-* Correct indention
-* Readability
-* High Cohesion
-* Low Coupling
-
-```csharp
-if(a < EARLIEST_HOUR && b < EARLIEST_HOUR
-&& c < EARLIEST_HOUR)
-a = EARLIEST_HOUR; b = EARLIEST_HOUR; c = EARLIEST_HOUR;
-```
-
-----
-
-```csharp
-public class TennisGame3 : ITennisGame {
-  private int p2; private int p1;
-  private string p1N; private string p2N;
-
-  public TennisGame3(string player1Name, string player2Name)
-  {
-    this.p1N = player1Name;
-    this.p2N = player2Name;
-  }
-
-  public string GetScore() {
-    string s;
-    if ((p1 < 4 && p2 < 4) && (p1 + p2 < 6)) {
-      string[] p = { "Love", "Fifteen", "Thirty", "Forty" };
-      s = p[p1];
-      return (p1 == p2) ? s + "-All" : s + "-" + p[p2];
-    }
-    else {
-      if (p1 == p2)
-        return "Deuce";
-      s = p1 > p2 ? p1N : p2N;
-      return ((p1 - p2) * (p1 - p2) == 1)
-                  ? "Advantage " + s
-                  : "Win for " + s;
-    }
-  }
-  public void WonPoint(string playerName) {
-    if (playerName == "player1")
-      this.p1 += 1;
-    else
-      this.p2 += 1;
-  }
-}
-```
-
-
-----
-
-### When is it good enough?
-
-* Does it solve the problem?
-  * Look at problem statement / exercise desciption
-*<!-- .element: class="fragment" data-fragment-index="1" --> Any known bugs?
-  * Small cosmetic errors?
-  * Big functional errors?
-*<!-- .element: class="fragment" data-fragment-index="2" --> Do you know how to solve these?
+* Code code code
 
 ---
 
@@ -156,8 +26,9 @@ public class TennisGame3 : ITennisGame {
 
 ### Half of a square
 
-Write a program that given a number lets say 5, prints half of a 5*5 square.
-
+Write a program that
+1. given a number lets say `5`
+2. prints  `1/2` of a `5*5` square.
 ```
 #####
 ####
@@ -168,30 +39,36 @@ Write a program that given a number lets say 5, prints half of a 5*5 square.
 
 ----
 
-### Solving the problem
+### Start with what you know
 
-* You properly know how to print a full square given the number 5
+* Print a line of 5's `#` given `5`
+```
+#####
+```
+* And maybe even &#128519;<!-- .element: class="fragment" data-fragment-index="1" -->
 ```
 #####
 #####
 #####
 #####
-#####
-```
-
-Or at least<!-- .element: class="fragment" data-fragment-index="1" -->
-
-```
 #####
 ```
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ----
 
-### Counting down
+### Restate problem
 
-Can you write an `expression` in the loop such that it prints the numbers `5` through `1`?
+Can you write an `expression` in the loop, such that it prints the numbers `5` through `1`?
 
+| row | desired |
+|-----|---------|
+| 1 | 5 |
+| 2 | 4 |
+| 3 | 3 |
+| 4 | 2 |
+| 5 | 1 |
+<!-- .element: style="font-size: 20px" -->
 
 ```csharp
 for (int row = 1; row <= 5; row++) {
@@ -203,9 +80,9 @@ Maybe<!-- .element: class="fragment" data-fragment-index="2" --> '`row * -1`'
 
 ----
 
-### Conting down (cont.)
+### Conting down
 
-| Row | Desired | 'Row * -1' | Difference |
+| row | desired | 'row * -1' | difference |
 |-----|---------|---------|------------|
 | 1 | 5 | -1 | 6 |
 | 2 | 4 | -2 | 6 |
@@ -213,8 +90,8 @@ Maybe<!-- .element: class="fragment" data-fragment-index="2" --> '`row * -1`'
 | 4 | 2 | -4 | 6 |
 | 5 | 1 | -5 | 6 |
 
-* Formula must be<!-- .element: class="fragment" data-fragment-index="2" --> `(Row * -1) + 6`
-  * or just `6 - Row`
+* Formula must be<!-- .element: class="fragment" data-fragment-index="2" --> `(row * -1) + 6`
+  * or just `6 - row`
 
 ----
 
@@ -237,6 +114,8 @@ for (int row = 1; row <= 5; row++) {
 
 ----
 
+<!-- .slide: data-visibility="hidden" -->
+
 ### User stories vs Use case
 
 "`User Stories` are centered on the result and the benefit of the thing you're describing, whereas `Use Cases` can be more granular, and describe how your system will act"
@@ -251,15 +130,8 @@ for (int row = 1; row <= 5; row++) {
 
 We will use this definition:
 
-**User story**: vertical, testable, user valued.
-
-
-----
-
-### User stories
-
 * Vertical:
-  * Cut accross multiple layers in the architecture
+  * Cut accross multiple layers in the system
 * Testable:
   * Should be testable either by code or manually
 * User valued:
@@ -271,21 +143,13 @@ We will use this definition:
 
 Is removing:
 ```csharp
-Console.WriteLine("Hello World")
+Console.WriteLine("Hello World!")
 ```
 a user good story?
 
 Adding a button to UI?<!-- .element: class="fragment" -->
 
 Setting up project structure? <!-- .element: class="fragment" -->
-
-----
-
-### User story size
-
-* Effort
-* Complexity
-* Unknowns
 
 ----
 
@@ -299,37 +163,38 @@ From minutes to months.
 
 ### Why small stories?
 
-* Problem is divided into smaller parts
-* Easier to make a plan
-* Easier to recognise known parts
-
-Note:
-- Users benefits earlier
-  - you make money faster
-  - you always have something that works
-  - you always have something you can test
+Remember? <!-- .element: class="fragment" data-fragment-index="1" -->
+* Always have a plan <!-- .element: class="fragment" data-fragment-index="1" -->
+* Restate problem <!-- .element: class="fragment" data-fragment-index="1" -->
+* Divide the problem <!-- .element: class="fragment" data-fragment-index="1" -->
+* Start with what you know <!-- .element: class="fragment" data-fragment-index="1" -->
+* Reduce the problem <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ----
 
 ![./img/user-stories.png](./img/user-stories.png) <!-- .element: style="height:500px" -->
 
 Note:
+Green:
+  - Users benefits earlier
+    - you make money faster
+    - you always have something that works
+    - you always have something you can test
+
 Blue: Scrum - harder to test
 Waterfall: Customer/users get everything at once - how to test?
 
 ---
 
-### Exercise
+<!-- .slide: data-background-image="./img/blank_cropped.jpeg" -->
 
-* Divide into 2-3 persons groups
+* Divide into 2-3 persons groups (**2 min**)
     * Try meeting new people :-)
-* 15 min for breaking down problem into small user stories
-* If time allows
-    * Start implementing in 8 minute development sprints
+* Breaking down problem into small user stories (**15 min**)
 
 ----
 
-### Product
+### Price and VAT calculator
 
 * **User input:**
   * How many items
@@ -340,6 +205,8 @@ Waterfall: Customer/users get everything at once - how to test?
       * Discount based on total price
       * Add state tax based on state and discounted price
 
+![cash register](./img/cash_register.png "") <!-- .element: style="height: 200px" -->
+
 ----
 
 | Order value | Discount rate| * | State | Tax Rate |
@@ -349,6 +216,17 @@ Waterfall: Customer/users get everything at once - how to test?
 | 7.000 | 7% | * | TX | 6.25% |
 | 10.000 | 10% | * | AL | 4.00% |
 | 50.000 | 15% | * | CA | 8.25% |
+
+----
+
+<!-- .slide: data-background-image="./img/hourglass.jpeg" -->
+
+## So lets start
+
+creating those user stories
+
+
+<countdown time="1020" autostart="yes" />
 
 
 ----
@@ -378,6 +256,176 @@ Waterfall: Customer/users get everything at once - how to test?
   3. TX
   4. AL
   5. CA
+
+---
+
+## Basic skills
+
+What is taught on 'real' courses:
+
+* Programing language
+  * Control flow, methods/function
+  * OORPG, OOP, ITS1, ITS2, Programmering, ..
+* Data structures
+  * List, queue, stack, tree
+  * DOA, Algoritmer og Datastrukure
+* Software architecture & design
+  * SWD, ITS3, Software Architecture, 
+
+----
+
+### Learn you editor?
+
+* Shortcuts ([VS Code](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf), [VS 2019](https://visualstudiomagazine.com/articles/2019/06/06/visual-studio-productivity.aspx), [Rider](https://www.jetbrains.com/help/rider/mastering_keyboard_shortcuts.html))
+* Views
+* Plugins / extensions
+
+
+----
+
+#### Programming languages
+
+* Compilled languages
+  * E.g. `C`, `C++`, and `C#` Compiled by compiler
+  * Happens in Visual Studio behind your back
+* Intepretated languages
+  * E.g. `JavaScript` and `Python` executed directly
+* Transpiled languages
+  * E.g. `Typescript` translated to JavaScript
+
+----
+
+### Toolchains
+
+* Cross compilation, linting, obfuscating, etc.?
+    * Are errors coming from these?
+
+----
+
+### What is good code?
+
+* Correct indention
+* Readability
+* High Cohesion
+* Low Coupling
+
+
+----
+
+```csharp
+public class TennisGame3 : ITennisGame {
+  public string GetScore() {
+    string s;
+    if ((p1 < 4 && p2 < 4) && (p1 + p2 < 6)) {
+    string[] p = { "Love", "Fifteen", "Thirty", "Forty" };
+    s = p[p1];
+    return (p1 == p2) ? s + "-All" : s + "-" + p[p2];
+    }
+    else {
+    if (p1 == p2)
+    return "Deuce";
+    s = p1 > p2 ? p1N : p2N;
+    return ((p1 - p2) * (p1 - p2) == 1) ? "Advantage " + s : "Win for " + s;
+    }
+  }
+}
+```
+
+----
+
+```csharp
+public class TennisGame3 : ITennisGame {
+  public string GetScore() {
+    string s;
+    if ((p1 < 4 && p2 < 4) &&
+        (p1 + p2 < 6)) {
+      string[] p = { "Love", "Fifteen", "Thirty", "Forty" };
+      s = p[p1];
+      return (p1 == p2)
+                 ? s + "-All"
+                 : s + "-" + p[p2];
+    }
+    else {
+      if (p1 == p2)
+      {
+        return "Deuce";
+      }
+      s = p1 > p2
+           ? p1N
+           : p2N;
+      return ((p1 - p2) * (p1 - p2) == 1)
+               ? "Advantage " + s
+               : "Win for " + s;
+    }
+  }
+}
+
+```
+
+Note:
+
+```csharp
+public class TennisGame3 : ITennisGame {
+  private int p2; private int p1;
+  private string p1N; private string p2N;
+
+  public TennisGame3(string player1Name, string player2Name) {
+    this.p1N = player1Name;
+    this.p2N = player2Name;
+  }
+
+  public string GetScore() {
+    string s;
+    if ((p1 < 4 && p2 < 4) && (p1 + p2 < 6)) {
+      string[] p = { "Love", "Fifteen", "Thirty", "Forty" };
+      s = p[p1];
+      return (p1 == p2)
+               ? s + "-All"
+               : s + "-" + p[p2];
+    }
+    else {
+      if (p1 == p2)
+        return "Deuce";
+      s = p1 > p2 ? p1N : p2N;
+      return ((p1 - p2) * (p1 - p2) == 1)
+           ? "Advantage " + s
+           : "Win for " + s;
+    }
+  }
+  public void WonPoint(string playerName) {
+    if (playerName == "player1")
+      this.p1 += 1;
+    else
+      this.p2 += 1;
+  }
+}
+```
+
+----
+
+### When is it good enough?
+
+* Does it solve the problem?
+  * Look at problem statement / exercise desciption
+*<!-- .element: class="fragment" data-fragment-index="1" --> Any known bugs?
+  * Small cosmetic errors?
+  * Big functional errors?
+*<!-- .element: class="fragment" data-fragment-index="1" --> Do you know how to solve these?
+
+---
+
+### So lets start implementing
+
+
+* Start implementing in `8 minute` development sprints
+* Every 8 minute, `show your progress` to another group
+
+----
+
+<!-- .slide: data-background-image="./img/hourglass.jpeg" -->
+
+<countdown time="480" autostart="yes" playTickSoundLast="10" tickSound="http://soundbible.com/grab.php?id=2044&type=mp3" timeIsUpSound="http://soundbible.com/grab.php?id=1746&type=mp3" />
+
 
 ---
 
