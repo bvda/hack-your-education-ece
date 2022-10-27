@@ -268,7 +268,7 @@ What is taught on 'real' courses:
   * OORPG, OOP, ITS1, ITS2, Programmering, ..
 * Data structures
   * List, queue, stack, tree
-  * DOA, Algoritmer og Datastrukure
+  * DOA, Algoritmer og Datastrukturer
 * Software architecture & design
   * SWD, ITS3, Software Architecture, 
 
@@ -280,18 +280,17 @@ What is taught on 'real' courses:
 * Views
 * Plugins / extensions
 
-
 ----
 
 #### Programming languages
 
-* Compilled languages
+* Compiled languages
   * E.g. `C`, `C++`, and `C#` Compiled by compiler
   * Happens in Visual Studio behind your back
-* Intepretated languages
-  * E.g. `JavaScript` and `Python` executed directly
+* Interpreted languages
+  * E.g. `JavaScript` and `Python` are executed directly
 * Transpiled languages
-  * E.g. `Typescript` translated to JavaScript
+  * E.g. `TypeScript` is translated to JavaScript
 
 ----
 
@@ -308,7 +307,6 @@ What is taught on 'real' courses:
 * Readability
 * High Cohesion
 * Low Coupling
-
 
 ----
 
