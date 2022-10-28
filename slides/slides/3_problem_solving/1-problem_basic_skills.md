@@ -1,11 +1,21 @@
-<!-- .slide: data-background="#003d73" -->
-## Problem solving + Basic skills
-
-![AU Logo](./../img/HACK_LOGO.png "AU Logo") <!-- .element style="width: 200px; position: absolute; top: 200px; left: 50px" -->
+<!-- .slide: data-background-image="./img/Hack_Meetup.jpg" -->
 
 ----
 
-### TODO Today
+<!-- .slide: data-background-image="./img/Supercomputers.jpg" -->
+
+----
+
+<!-- .slide: data-background-image="./img/extreme-carpaccio.jpg" -->
+
+----
+
+<!-- .slide: data-background-image="./img/Cloud-Functions.jpg" -->
+
+----
+
+
+### Today
 
 * Problem Solving
 * Use cases
@@ -24,7 +34,9 @@
 
 ----
 
-### Half of a square
+### Always have a plan
+
+*Print Half of a square*
 
 Write a program that
 1. given a number lets say `5`
@@ -72,7 +84,7 @@ Can you write an `expression` in the loop, such that it prints the numbers `5` t
 
 ```csharp
 for (int row = 1; row <= 5; row++) {
-   Console.WriteLine(`expression`);
+   Console.WriteLine(<<< expression >>>);
 }
 ```
 
