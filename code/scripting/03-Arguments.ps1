@@ -1,18 +1,15 @@
-param ($src_path, $dest_path)
-
-
+param ($Prefix='')
 
 Write-Host($args)
 
-# # Print provided arguments to console
-# foreach($arg in $args) {
-#   Write-Host $arg
-# }
+$src_path = $args[0]
+$dest_path = $args[1]
 
-# Named parameters
+New-Item -Path $dest_path -ItemType Directory -Force | Out-Null
 Push-Location $src_path
 foreach($file in Get-ChildItem) {
-  Write-Host $file
+  Write-Host "Copying $file to $dest_path"
+  Copy-Item $file -Destination $dest_path
 }
 
 Pop-Location

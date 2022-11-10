@@ -1,4 +1,4 @@
-Set-Location "/Users/au299473/Workspace/hack-your-cs-education/code/scripting/"
+Set-Location -Path .
 New-Item "./out" -ItemType Directory -Force
 
 # Declare 'variables'

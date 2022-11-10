@@ -1,2 +1,2 @@
-# Print text to 
-Write-Host 'Hello 👋, Professor Kirk! 😏' -BackgroundColor Green -ForegroundColor DarkBlue
+# Print text to terminal
+Write-Host 'Hello 👋, Lektor Kirk! 😏' -BackgroundColor Green -ForegroundColor Magenta

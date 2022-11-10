@@ -1,5 +1,5 @@
 # Set current working directory
-Set-Location -Path /Users/au299473/Workspace/hack-your-cs-education/code/scripting/data
+Set-Location -Path /Users/au299473/Workspace/hack-your-education-ece/code/scripting/data
 
 # Print directory content to console
 foreach($file in Get-ChildItem) {

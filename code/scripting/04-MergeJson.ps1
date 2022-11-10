@@ -1,5 +1,5 @@
 # Set current working directory
-Set-Location -Path /Users/au299473/Workspace/hack-your-cs-education/code/scripting/data
+Set-Location -Path /Users/au299473/Workspace/hack-your-education-ece/code/scripting/data
 
 # Create ArrayList
 $result_base = New-Object System.Collections.ArrayList
@@ -10,7 +10,7 @@ foreach($file in Get-ChildItem) {
   Write-Host "Reading $file"
 
   # Convert file content to JSON
-  $json = Get-Content $file | ConvertFrom-Json
+  $json = Get-Content -Raw $file | ConvertFrom-Json
 
   # Loop through each entry in JSON array
   foreach($person in $json) {
@@ -19,4 +19,6 @@ foreach($file in Get-ChildItem) {
 }
 
 # Convert Array to JSON and write to file
-$result_base | ConvertTo-Json | Out-File '../out/merged-chunks.json'
+$result_base | ConvertTo-Json | Out-File (New-Item -Path ../out/merged-chunks.json -Force)
+
+Set-Location -Path /Users/au299473/Workspace/hack-your-education-ece/code/scripting
