@@ -1,6 +1,4 @@
-param ($src_path, $dest_path)
-
-
+Param ($src_path, $dest_path)
 
 Write-Host($args)
 
@@ -14,5 +12,6 @@ Push-Location $src_path
 foreach($file in Get-ChildItem) {
   Write-Host $file
 }
+Write-Host($dest_path)
 
 Pop-Location

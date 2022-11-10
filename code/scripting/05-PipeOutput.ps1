@@ -1,5 +1,5 @@
-Set-Location "/Users/au299473/Workspace/hack-your-cs-education/code/scripting/"
-New-Item "./out" -ItemType Directory -Force
+Set-Location -Path .
+New-Item -Path ./out -ItemType Directory -Force
 
 # Declare 'variables'
 $fizzbuzz = (3,5), (5,7), (7,9), (11,13), (13, 15)
