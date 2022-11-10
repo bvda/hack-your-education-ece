@@ -11,5 +11,6 @@ foreach($file in Get-ChildItem) {
   Write-Host "Copying $file to $dest_path"
   Copy-Item $file -Destination $dest_path
 }
+Write-Host($dest_path)
 
 Pop-Location

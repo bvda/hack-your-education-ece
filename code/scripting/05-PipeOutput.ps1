@@ -1,5 +1,5 @@
 Set-Location -Path .
-New-Item "./out" -ItemType Directory -Force
+New-Item -Path ./out -ItemType Directory -Force
 
 # Declare 'variables'
 $fizzbuzz = (3,5), (5,7), (7,9), (11,13), (13, 15)
