@@ -1,24 +1,11 @@
-<!-- .slide: data-background-image="./img/Hack_Meetup.jpg" -->
+<!-- .slide: data-background-image="./img/intro.jpeg" -->
 
 ----
-
-<!-- .slide: data-background-image="./img/Supercomputers.jpg" -->
-
-----
-
-<!-- .slide: data-background-image="./img/extreme-carpaccio.jpg" -->
-
-----
-
-<!-- .slide: data-background-image="./img/Cloud-Functions.jpg" -->
-
-----
-
 
 ### Today
 
 * Problem Solving
-* Use cases
+* User stories
 * Basic skills
 * Code code code
 
@@ -73,14 +60,11 @@ Write a program that
 
 Can you write an `expression` in the loop, such that it prints the numbers `5` through `1`?
 
-| row | desired |
-|-----|---------|
-| 1 | 5 |
-| 2 | 4 |
-| 3 | 3 |
-| 4 | 2 |
-| 5 | 1 |
-<!-- .element: style="font-size: 20px" -->
+
+| row     | 1 | 2 | 3 | 4 | 5 |
+|-|-|-|-|-|-|
+| desired | 5 | 4 | 3 | 2 | 1 |
+<!-- .element: style="font-size: 28px" -->
 
 ```csharp
 for (int row = 1; row <= 5; row++) {
@@ -88,11 +72,17 @@ for (int row = 1; row <= 5; row++) {
 }
 ```
 
+```c
+for (int row = 1; row <= 5; row++) {
+  printf("%d\n", row);
+}
+```
+
 Maybe<!-- .element: class="fragment" data-fragment-index="2" --> '`row * -1`'
 
 ----
 
-### Conting down
+### Counting down
 
 | row | desired | 'row * -1' | difference |
 |-----|---------|---------|------------|
@@ -101,8 +91,9 @@ Maybe<!-- .element: class="fragment" data-fragment-index="2" --> '`row * -1`'
 | 3 | 3 | -3 | 6 |
 | 4 | 2 | -4 | 6 |
 | 5 | 1 | -5 | 6 |
+<!-- .element: style="font-size: 36px" -->
 
-* Formula must be<!-- .element: class="fragment" data-fragment-index="2" --> `(row * -1) + 6`
+* so formula must be<!-- .element: class="fragment" data-fragment-index="2" --> `(row * -1) + 6`
   * or just `6 - row`
 
 ----
@@ -110,6 +101,7 @@ Maybe<!-- .element: class="fragment" data-fragment-index="2" --> '`row * -1`'
 #### A final solution
 
 ```csharp
+// C#
 for (int row = 1; row <= 5; row++) {
     for (int j = 1; j <= 6-row; j++) {
         Console.Write("#");
@@ -118,11 +110,17 @@ for (int row = 1; row <= 5; row++) {
 }
 ```
 
+```c
+// C
+for (int row = 1; row <= 5; row++) {
+  for (int j = 1; j <= 6-row; j++) {
+    printf("#");
+  }
+  printf("\n");
+}
+```
+
 ---
-
-## Lets slice an elephant
-
-![Slicing](./img/meat.jpg "Meat slicer") <!-- .element style="width: 400px" -->
 
 ----
 
@@ -139,6 +137,8 @@ for (int row = 1; row <= 5; row++) {
 ----
 
 ### User stories
+
+A way to define a piece of functionality
 
 We will use this definition:
 
@@ -198,10 +198,20 @@ Waterfall: Customer/users get everything at once - how to test?
 
 ---
 
+## Lets slice an elephant
+
+![Slicing](./img/meat.jpg "Meat slicer") <!-- .element style="width: 400px" -->
+
+----
+
 <!-- .slide: data-background-image="./img/blank_cropped.jpeg" -->
 
+&nbsp; 
+
+&nbsp; 
+
 * Divide into 2-3 persons groups (**2 min**)
-    * Try meeting new people :-)
+    * Try meeting new people &#128563; &#128561;
 * Breaking down problem into small user stories (**15 min**)
 
 ----
@@ -243,73 +253,34 @@ creating those user stories
 
 ----
 
-<!-- .slide: style="font-size: 0.5em" -->
+<!-- .slide: style="font-size: 0.7em" -->
 
-#### User stories <!-- .element: style="font-size:1.3em" -->
+#### User stories <!-- .element: style="font-size:1.6em" -->
 
-1. Input #item
-2. Validate input
-3. Input price per item
-4. Validate price
-5. Sum value
-6. Present total
-7. Calculate discount for 
-  1. 1000
-  2. 5000
-  3. 7000
-  4. 10.000
-  5. 50.000
-8. Input state code
-9. Validate state code
-10. Present error
-11. Calculate tax rate for
-  1. UT
-  2. NV
-  3. TX
-  4. AL
-  5. CA
+| User stories | User stories | User stories |
+|-|-|-|
+| 1. Input #item            | 7.1. 1000              | 10. Present error |
+| 2. Validate input         | 7.2. 5000              | 11. Calculate tax rate for |
+| 3. Input price per item   | 7.3. 7000              | 11.1. UT |
+| 4. Validate price         | 7.4. 10.000            | 11.2. NV
+| 5. Sum value              | 7.5. 50.000            | 11.3. TX
+| 6. Present total          | 8. Input state code    | 11.4. AL
+| 7. Calculate discount for | 9. Validate state code | 11.5. CA
+
 
 ---
 
-## Basic skills
+<!-- .slide: data-background-image="img/cockpit.jpeg" style="color: white;background-color: #79797988; line-height: 2 " -->
 
-What is taught on 'real' courses:
+## Learn your tools <!-- .element: style="color: white;" -->
 
-* Programing language
-  * Control flow, methods/function
-  * OORPG, OOP, ITS1, ITS2, Programmering, ..
-* Data structures
-  * List, queue, stack, tree
-  * DOA, Algoritmer og Datastrukturer
-* Software architecture & design
-  * SWD, ITS3, Software Architecture, 
+* Programming languages, Data structures, software design
+* Your editor ([VS 2022](https://learn.microsoft.com/en-us/visualstudio/ide/productivity-shortcuts?view=vs-2022), [VS Code](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf), [Rider](https://www.jetbrains.com/help/rider/mastering_keyboard_shortcuts.html))
+  * Shortcuts, views, plugins
+* Other tools
+  * linter, obfuscating ...
+* Process
 
-----
-
-### Learn you editor?
-
-* Shortcuts ([VS Code](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf), [VS 2019](https://visualstudiomagazine.com/articles/2019/06/06/visual-studio-productivity.aspx), [Rider](https://www.jetbrains.com/help/rider/mastering_keyboard_shortcuts.html))
-* Views
-* Plugins / extensions
-
-----
-
-#### Programming languages
-
-* Compiled languages
-  * E.g. `C`, `C++`, and `C#` Compiled by compiler
-  * Happens in Visual Studio behind your back
-* Interpreted languages
-  * E.g. `JavaScript` and `Python` are executed directly
-* Transpiled languages
-  * E.g. `TypeScript` is translated to JavaScript
-
-----
-
-### Toolchains
-
-* Cross compilation, linting, obfuscating, etc.?
-    * Are errors coming from these?
 
 ----
 
@@ -319,6 +290,32 @@ What is taught on 'real' courses:
 * Readability
 * High Cohesion
 * Low Coupling
+
+---
+
+### So lets start implementing
+
+
+* Start implementing in `8 minute` development sprints
+* Every 8 minute, `show your progress` to another group
+
+----
+
+## Round 1
+
+<!-- .slide: data-background-image="./img/hourglass.jpeg" -->
+
+TODO: change to 480
+
+<countdown time="15" autostart="yes" playTickSoundLast="10" tickSound="http://soundbible.com/grab.php?id=2044&type=mp3" timeIsUpSound="http://soundbible.com/grab.php?id=1746&type=mp3" />
+
+----
+
+## Round 2
+
+<!-- .slide: data-background-image="./img/hourglass.jpeg" -->
+
+<countdown time="10" autostart="yes" playTickSoundLast="10" tickSound="http://soundbible.com/grab.php?id=2044&type=mp3" timeIsUpSound="http://soundbible.com/grab.php?id=1746&type=mp3" />
 
 ----
 
@@ -420,22 +417,30 @@ public class TennisGame3 : ITennisGame {
 *<!-- .element: class="fragment" data-fragment-index="1" --> Any known bugs?
   * Small cosmetic errors?
   * Big functional errors?
-*<!-- .element: class="fragment" data-fragment-index="1" --> Do you know how to solve these?
-
----
-
-### So lets start implementing
-
-
-* Start implementing in `8 minute` development sprints
-* Every 8 minute, `show your progress` to another group
+  *<!-- .element: class="fragment" data-fragment-index="2" --> Do you know how to solve these?
 
 ----
 
+## Round 3+
+
 <!-- .slide: data-background-image="./img/hourglass.jpeg" -->
 
-<countdown time="480" autostart="yes" playTickSoundLast="10" tickSound="http://soundbible.com/grab.php?id=2044&type=mp3" timeIsUpSound="http://soundbible.com/grab.php?id=1746&type=mp3" />
+<countdown time="10" autostart="yes" playTickSoundLast="10" tickSound="http://soundbible.com/grab.php?id=2044&type=mp3" timeIsUpSound="http://soundbible.com/grab.php?id=1746&type=mp3" />
 
+----
+
+### Katas
+
+Inspiration: [kata-log.rocks](https://kata-log.rocks/elephant-carpaccio)
+
+!["Constraints"](./img/kata.png "") <!-- .element: style="width: 700px" -->
+
+No mouse, .. TODO://
+
+
+----
+
+// TODO insert image for next HyE
 
 ---
 
