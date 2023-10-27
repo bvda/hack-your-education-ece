@@ -122,8 +122,6 @@ for (int row = 1; row <= 5; row++) {
 
 ---
 
-----
-
 <!-- .slide: data-visibility="hidden" -->
 
 ### User stories vs Use case
@@ -259,13 +257,13 @@ creating those user stories
 
 | User stories | User stories | User stories |
 |-|-|-|
-| 1. Input #item            | 7.1. 1000              | 10. Present error |
-| 2. Validate input         | 7.2. 5000              | 11. Calculate tax rate for |
-| 3. Input price per item   | 7.3. 7000              | 11.1. UT |
-| 4. Validate price         | 7.4. 10.000            | 11.2. NV
-| 5. Sum value              | 7.5. 50.000            | 11.3. TX
-| 6. Present total          | 8. Input state code    | 11.4. AL
-| 7. Calculate discount for | 9. Validate state code | 11.5. CA
+| **1.** Input #item            | **7.1.** 1000              | **10.** Present error |
+| **2.** Validate input         | **7.2.** 5000              | **11.** Calculate tax rate for |
+| **3.** Input price per item   | **7.3.** 7000              | **11.1.** UT |
+| **4.** Validate price         | **7.4.** 10.000            | **11.2.** NV
+| **5.** Sum value              | **7.5.** 50.000            | **11.3.** TX
+| **6.** Present total          | **8.** Input state code    | **11.4.** AL
+| **7.** Calculate discount for | **9.** Validate state code | **11.5.** CA
 
 
 ---
@@ -305,9 +303,8 @@ creating those user stories
 
 <!-- .slide: data-background-image="./img/hourglass.jpeg" -->
 
-TODO: change to 480
 
-<countdown time="15" autostart="yes" playTickSoundLast="10" tickSound="http://soundbible.com/grab.php?id=2044&type=mp3" timeIsUpSound="http://soundbible.com/grab.php?id=1746&type=mp3" />
+<countdown time="480" autostart="yes" playTickSoundLast="10" tickSound="http://soundbible.com/grab.php?id=2044&type=mp3" timeIsUpSound="http://soundbible.com/grab.php?id=1746&type=mp3" />
 
 ----
 
@@ -315,7 +312,7 @@ TODO: change to 480
 
 <!-- .slide: data-background-image="./img/hourglass.jpeg" -->
 
-<countdown time="10" autostart="yes" playTickSoundLast="10" tickSound="http://soundbible.com/grab.php?id=2044&type=mp3" timeIsUpSound="http://soundbible.com/grab.php?id=1746&type=mp3" />
+<countdown time="480" autostart="yes" playTickSoundLast="10" tickSound="http://soundbible.com/grab.php?id=2044&type=mp3" timeIsUpSound="http://soundbible.com/grab.php?id=1746&type=mp3" />
 
 ----
 
@@ -425,7 +422,7 @@ public class TennisGame3 : ITennisGame {
 
 <!-- .slide: data-background-image="./img/hourglass.jpeg" -->
 
-<countdown time="10" autostart="yes" playTickSoundLast="10" tickSound="http://soundbible.com/grab.php?id=2044&type=mp3" timeIsUpSound="http://soundbible.com/grab.php?id=1746&type=mp3" />
+<countdown time="480" autostart="yes" playTickSoundLast="10" tickSound="http://soundbible.com/grab.php?id=2044&type=mp3" timeIsUpSound="http://soundbible.com/grab.php?id=1746&type=mp3" />
 
 ----
 
@@ -435,12 +432,12 @@ Inspiration: [kata-log.rocks](https://kata-log.rocks/elephant-carpaccio)
 
 !["Constraints"](./img/kata.png "") <!-- .element: style="width: 700px" -->
 
-No mouse, .. TODO://
+No mouse, Hide file tree, Use a new language, Pair programming
 
 
-----
+---
 
-// TODO insert image for next HyE
+<!-- .slide: data-background-image="./img/debugging.jpg" -->
 
 ---
 
