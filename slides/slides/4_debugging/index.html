@@ -64,48 +64,34 @@
 				<h3>debug session</h3>
 			</section>
 			<section>
-				<h2>FizzBuzz</h2>
-				<h4>Requirements</h4>
+				<h2>Exercise: 01 I Can Win</h2>
 				<ul>
-					<li><mark>FR1</mark>—Any value divisible by three (3) shall be replaced with "fizz"</li>
-					<li><mark>FR2</mark>—Any value divisible by five (5) shall be replaced with "buzz"</li>
-					<li><mark>FR3</mark>—Any value divisible by fifteen (15) shall be replaced with "FizzBuzz"</li>
-					<li><mark>FR4</mark>—Output for each value shall be printed on a separate line</li>
-					<li><mark>FR5</mark>—Output shall be persisted in a file called "FizzBuzz.log"</li>
+						<li>Make sure you have Python 3 installed
+								<ul>
+									<li>Go to <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> and get your copy</li>
+								</ul>
+							</li>
+					</li>
+					<li>Clone <a href="https://github.com/bvda/hack-your-education-ece">https://github.com/bvda/hack-your-education-ece</a></li>
+					<li>Open the <code>hack-your-education-ece</code> directory in Visual Studio Code (Get it @ <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>)</li>
+					<li>Run <code>code/debugging/01 I Can Win/01.01 Syntax.py</code> and fix the bug</li>
 				</ul>
+				<aside class="notes" aria-label="notes"></aside>
 			</section>
-			<section>
-				<h2>Exercise 1</h2>
+			<section data-background-image="../img/install-fest.jpg" data-background-opacity="0.5">
+				<h2>Install Party</h2>
+				<ul>
+					<li>Materials @ <a href="https://github.com/bvda/hack-your-education-ece">https://github.com/bvda/hack-your-education-ece</a></li>
+					<li>Python @ <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
+					<li>VS Code @ <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
 						<ul>
-							<li>Get the code on GitHub
-								<ul>
-									<li>Clone <a href="https://github.com/bvda/FizzBuzz">https://github.com/bvda/FizzBuzz</a></li>
-									<li>Checkout branch <code>exercise-1</code></li>
-								</ul>
-							</li>
-							<li>Fix the errors, so the program is runnable
-								<ul>
-									<li>What was the type of errors?</li>
-									<li>How did you find them?</li>
-								</ul>
-							</li>
+							<li>Install the Python extension @ <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">https://marketplace.visualstudio.com/items?itemName=ms-python.python</a></li></li>
 						</ul>
-						<h6 style="font-size: 0.25em">Requirements</h6>
-						<ul>
-							<li style="font-size: 0.25em"><mark>FR1</mark>—Any value divisible by three (3) shall be replaced with "fizz"</li>
-							<li style="font-size: 0.25em"><mark>FR2</mark>—Any value divisible by five (5) shall be replaced with "buzz"</li>
-							<li style="font-size: 0.25em"><mark>FR3</mark>—Any value divisible by fifteen (15) shall be replaced with "FizzBuzz"</li>
-							<li style="font-size: 0.25em"><mark>FR4</mark>—Output for each value shall be printed on a separate line</li>
-							<li style="font-size: 0.25em"><mark>FR5</mark>—Output shall be persisted in a file called "FizzBuzz.log"</li>
-						</ul>
-				<aside class="notes" aria-label="notes">
-					<h2>Syntax errors</h2>
-					<ul>
-						<li>Print() not implemented in FizzBuzz01 (declared in IFizzBuzz01.cs)</li>
-						<li>Missing start parameter in Program (method declaration Calculate(int start, int end))</li>
-						<li>Missing semicolon in print "fizz"</li>
-					</ul>
-				</aside>
+					</li>
+					<li>Run <code>code/debugging/01 I Can Win/01.01 Syntax.py</code> and fix the bug</li>
+				</ul>
+				<hr />
+				<h3><countdown time="600" autostart="no" /></h3>
 			</section>
 			<section>
 				<h2>Classes of errors</h2>
@@ -134,31 +120,18 @@
 				</ul>
 			</section>
 			<section>
-				<h2>Exercise 2</h2>
+				<h2>On the hunt</h2>
 				<ul>
-					<li>Checkout branch <code>exercise-02</code></li>
-					<li>Fix the errors, so the program is runnable
+					<li>Code @ <code>code/debugging/02 Bring It On/02.01 Indentation.py</code></li>
+					<li>Fix the bugs, so the program is runnable
 						<ul>
-							<li>What was the type of errors?</li>
+							<li>What type of bugs did you find?</li>
+							<li>Were there any difference in difficulty?</li>
 						</ul>
 					</li>
-					<li>Fix the bugs, so the program fulfills <mark>FR4</mark></li>
 				</ul>
-				<h6 style="font-size: 0.25em">Requirements</h6>
-				<ul>
-					<li style="font-size: 0.25em"><mark>FR1</mark>—Any value divisible by three (3) shall be replaced with "fizz"</li>
-					<li style="font-size: 0.25em"><mark>FR2</mark>—Any value divisible by five (5) shall be replaced with "buzz"</li>
-					<li style="font-size: 0.25em"><mark>FR3</mark>—Any value divisible by fifteen (15) shall be replaced with "FizzBuzz"</li>
-					<li style="font-size: 0.25em"><mark>FR4</mark>—Output for each value shall be printed on a separate line</li>
-					<li style="font-size: 0.25em"><mark>FR5</mark>—Output shall be persisted in a file called "FizzBuzz.log"</li>
-				</ul>
-				<aside class="notes" aria-label="notes">
-					<h2>Simple errors</h2>
-					<ul>
-						<li>Print() implementation in Program.cs uses Console.Write (should be Console.WriteLine)</li>
-						<li>IList<string> result in Calculate() is uninitialized (NullPointerException)</li>
-					</ul>
-				</aside>
+				<hr />
+				<h3><countdown time="480" autostart="no" /></h3>
 			</section>
 			<section>
 				<h2>Toolbox</h2>
@@ -172,28 +145,18 @@
 				</ul>	
 			</section>
 			<section>
-				<h2>Exercise 3</h2>
+				<h3>Exercise 3</h3>
 				<ul>
-					<li>Checkout branch <code>exercise-03</code></li>
-					<li>Fix the bugs, so the program fulfills <mark>FR5</mark></li>
-					<li>Clean up the code</li>
+					<li>Code @ <code>code/debugging/03 Hurt Me Plenty/03.01 File IO.py</code></li>
+					<li>Fix the bugs, so the program is runnable
+						<ul>
+							<li>What type of bugs did you find?</li>
+							<li>Were there any difference in difficulty?</li>
+						</ul>
+					</li>
 				</ul>
-				<h6 style="font-size: 0.25em">Requirements</h6>
-				<ul>
-					<li style="font-size: 0.25em"><mark>FR1</mark>—Any value divisible by three (3) shall be replaced with "fizz"</li>
-					<li style="font-size: 0.25em"><mark>FR2</mark>—Any value divisible by five (5) shall be replaced with "buzz"</li>
-					<li style="font-size: 0.25em"><mark>FR3</mark>—Any value divisible by fifteen (15) shall be replaced with "FizzBuzz"</li>
-					<li style="font-size: 0.25em"><mark>FR4</mark>—Output for each value shall be printed on a separate line</li>
-					<li style="font-size: 0.25em"><mark>FR5</mark>—Output shall be persisted in a file called "FizzBuzz.log"</li>
-				</ul>
-				<aside class="notes" aria-label="notes">
-					<h2>Implementation errors</h2>
-					<ul>
-						<li>StreamWriter adds append=true (RTFM) <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter?view=net-5.0">StreamWriter Class (System.IO) | Microsoft Docs</a></li>
-						<li>StreamWriter is inside loop (should be outside)</li>
-						<li>Extract StreamWriter to function for Single Responsibility Priciple</li>
-					</ul>
-				</aside>
+				<hr />
+				<h3><countdown time="960" autostart="no" /></h3>
 			</section>
 			<section>
 				<h2>Approach</h2>
@@ -205,29 +168,6 @@
 					<li>Profit</li>
 				</ul>
 				<p class="fragment">Hello 👋, Lektor Kirk 😏</p>
-			</section>
-			<section>
-				<h2>Exercise 4</h2>
-				<ul>
-					<li>Checkout branch <code>exercise-04</code></li>
-					<li>Implement <mark>FR6</mark></li>
-				</ul>
-				<h6 style="font-size: 0.25em">Requirements</h6>
-				<ul>
-					<li style="font-size: 0.25em"><mark>FR1</mark>—Any value divisible by three (3) shall be replaced with "fizz"</li>
-					<li style="font-size: 0.25em"><mark>FR2</mark>—Any value divisible by five (5) shall be replaced with "buzz"</li>
-					<li style="font-size: 0.25em"><mark>FR3</mark>—Any value divisible by fifteen (15) shall be replaced with "FizzBuzz"</li>
-					<li style="font-size: 0.25em"><mark>FR4</mark>—Output for each value shall be printed on a separate line</li>
-					<li style="font-size: 0.25em"><mark>FR5</mark>—Output shall be persisted in a file called "FizzBuzz.log"</li>
-				</ul>
-				<aside class="notes" aria-label="notes">
-					<h2>Logical errors</h2>
-					<ul>
-						<li>Move "FizzBuzz" clause to the top (currently at the bottom)</li>
-						<li>Fix parameter "fizz" in else if for "Buzz"</li>
-						<li>Add start to Enumerator (is hardcoded to 0)</li>
-					</ul>
-				</aside>
 			</section>
 			<section>
 				<h2>Ask questions the smart way</h2>
@@ -254,6 +194,20 @@
 					</li>
 				</ul>
 			</section>
+			<section section data-background-image="../img/swat-briefing.png" data-background-opacity="0.5">
+				<h2>Exercise 4</h2>
+				<ul>
+					<li>Code @ <code>code/debugging/04 Hardcore/04.02 Encoding.py</code></li>
+					<li>Fix the bugs, so the program is runnable
+						<ul>
+							<li>What type of bugs did you find?</li>
+							<li>Were there any difference in difficulty?</li>
+						</ul>
+					</li>
+				</ul>
+				<hr />
+				<countdown time="960" autostart="no" />
+			</section>
 			<section>
 				<h2>Wrap-up</h2>
 				<ul>
@@ -276,11 +230,6 @@
 					</li>
 				</ul>
 			</section>
-			<section data-background-image="../img/swat-briefing.png">
-				<h3>HYE participants</h3>
-				<h4>arriving at</h4>
-				<h3>a crime scene</h3>
-			</section>
 			</div>
 		</div>
 
@@ -294,7 +243,14 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				dependencies: [
+          			{ src: "../../plugin/countdown/countdown.js" },
+		        ],
+				countdown: {
+					playTickSoundLast: 10,
+					tickSound: "http://soundbible.com/grab.php?id=2044&type=mp3",
+					timeIsUpSound: "http://soundbible.com/grab.php?id=1746&type=mp3"
+				},
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
