@@ -1,10 +1,8 @@
-print("# of items")
-number_of_items = input()
+number_of_items = int(input("Enter # of items: "))
 
-print("Price per item")
-price_per_item = input()
+price_per_item = input("Enter price per item: ")
 
-price = int(number_of_items) * float(price_per_item)
+price = int(number_of_items) * price_per_item
 
 if price >= 1_000:
   discount = 0.03
@@ -21,9 +19,7 @@ else:
 
 price = price - price * discount
 
-print(price)
-print("Add state tax")
-state = input()
+state = input("Enter state code: ")
 
 if state == "UT":
   tax = 0.0685
@@ -36,8 +32,7 @@ elif state == "AL":
 elif state == "CA":
   tax = 0.0825
 else:
-  print('Invalid state')
-  state = input()
+  print("Not available in your state")
 
 total = price + price * tax
 
