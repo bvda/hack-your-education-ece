@@ -1,11 +1,7 @@
-# import csv
-import csv
 from cash_register import item
 
-# PATH = ''
-PATH = 'code/debugging/04 Hardcore/cities.csv'
+PATH = ''
 
-# with open(PATH, 'r') as f:
 with open(PATH, 'r', encoding='utf-8') as f:
   data = csv.DictReader(f)
   dict_cities = { row['code']:row['name'] for row in data }
