@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Debugging 🐛</title>
+
+		<link rel="stylesheet" href="../../dist/reset.css">
+		<link rel="stylesheet" href="../../dist/reveal.css">
+		<link rel="stylesheet" href="../../dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="../img/HYE4_16x9.jpg"></section>
+				<section>
+					<div style="display: flex;">
+						<div style="display: flex; justify-content: center;">
+							<img src="../img/HACK_LOGO.png" alt="logo" width="20%">
+							<div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
+								<span>YOUR</span>
+								<span>EDUCATION</span>
+							</div>
+							<span style="display: flex; align-items: center;"><h1 style="margin: 0;">🐛</h1></span>
+						</div>
+					</div>
+				</section>
+				<section data-background-size="contain" data-background-image="../img/debug.jpeg"></section>
+				<section>
+					<h2>What is debugging?</h2>
+					<figure>
+						<blockquote cite="https://twitter.com/fortes/status/399339918213652480?lang=en">
+							<p>Debugging is like being the detective in a crime movie where you are also the murderer.</p>
+							<figcaption>—Filipe Fortes, <cite>Twitter, Nov. 2013</cite></figcaption>
+						</blockquote>
+					</figure>
+				</section>
+				<section>
+					<h2>Introduction</h2>
+					<ul>
+						<li>Debugging is the process of <mark>finding</mark> and <mark>resolving</mark> bugs
+							<ul>
+								<li>Bugs are defects or problems that prevent correct operation</li>
+							</ul>
+						</li>
+						<li>Running the application shows us the <mark>effects</mark> (or <mark>symptoms</mark>) of errors
+							<ul>
+								<li>Not the <mark>cause</mark> of errors</li>
+							</ul>
+						</li>
+						<li>It can be hard to <mark>identify</mark> and pin down <mark>problems</mark>
+							<ul>
+								<li>Remember computers only do what they're told</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section data-background-size="contain" data-background-image="../img/jurassic-poop.jpg">
+				<h3>Actual footage</h3>
+				<h4>of a</h4>
+				<h3>debug session</h3>
+			</section>
+			<section>
+				<h2>Exercise: 01 I Can Win</h2>
+				<ul>
+						<li>Make sure you have Python 3 installed
+								<ul>
+									<li>Go to <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> and get your copy</li>
+								</ul>
+							</li>
+					</li>
+					<li>Clone <a href="https://github.com/bvda/hack-your-education-ece">https://github.com/bvda/hack-your-education-ece</a></li>
+					<li>Open the <code>hack-your-education-ece</code> directory in Visual Studio Code (Get it @ <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>)</li>
+					<li>Run <code>code/debugging/01 I Can Win/01.01 Syntax.py</code> and fix the bug</li>
+				</ul>
+				<aside class="notes" aria-label="notes"></aside>
+			</section>
+			<section data-background-image="../img/install-fest.jpg" data-background-opacity="0.5">
+				<h2>Install Party</h2>
+				<ul>
+					<li>Materials @ <a href="https://github.com/bvda/hack-your-education-ece">https://github.com/bvda/hack-your-education-ece</a></li>
+					<li>Python @ <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
+					<li>VS Code @ <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
+						<ul>
+							<li>Install the Python extension @ <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">https://marketplace.visualstudio.com/items?itemName=ms-python.python</a></li></li>
+						</ul>
+					</li>
+					<li>Run <code>code/debugging/01 I Can Win/01.01 Syntax.py</code> and fix the bug</li>
+				</ul>
+				<hr />
+				<h3><countdown time="600" autostart="no" /></h3>
+			</section>
+			<section>
+				<h2>Classes of errors</h2>
+				<ul>
+					<li>Syntax or type errors
+						<ul>
+							<li>Always caught and reported by the compiler</li>
+						</ul>
+					</li>
+					<li>Typos or simple errors
+						<ul>
+							<li>Passes type-check</li>
+							<li>Easy to fix when identified</li>
+						</ul> 
+					</li>
+					<li>Implementation errors
+						<ul>
+							<li>Wrong use of framework</li>
+						</ul>
+					</li>
+					<li>Logical errors
+						<ul>
+							<li>Logically flawed algorithms</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>On the hunt</h2>
+				<ul>
+					<li>Code @ <code>code/debugging/02 Bring It On/02.01 Indentation.py</code></li>
+					<li>Fix the bugs, so the program is runnable
+						<ul>
+							<li>What type of bugs did you find?</li>
+							<li>Were there any difference in difficulty?</li>
+						</ul>
+					</li>
+				</ul>
+				<hr />
+				<h3><countdown time="480" autostart="no" /></h3>
+			</section>
+			<section>
+				<h2>Toolbox</h2>
+				<ul>
+					<li>(🪵) Logging</li>
+					<li>(🔴) Breakpoints</li>
+					<li>(🎯) Problem simplification</li>
+					<li>(👓) RTFM (Read The <del>Fucking</del> <ins>Fine</ins> Manual)</li>
+					<li>(🦆) Talk to a friend</li>
+					<li>(🚶) Take a walk</li>
+				</ul>	
+			</section>
+			<section>
+				<h3>Exercise 3</h3>
+				<ul>
+					<li>Code @ <code>code/debugging/03 Hurt Me Plenty/03.01 File IO.py</code></li>
+					<li>Fix the bugs, so the program is runnable
+						<ul>
+							<li>What type of bugs did you find?</li>
+							<li>Were there any difference in difficulty?</li>
+						</ul>
+					</li>
+				</ul>
+				<hr />
+				<h3><countdown time="960" autostart="no" /></h3>
+			</section>
+			<section>
+				<h2>Approach</h2>
+				<ul>
+					<li>Reproduce the problem</li>
+					<li>Reduce the problem</li>
+					<li>Apply tools</li>
+					<li>????</li>
+					<li>Profit</li>
+				</ul>
+				<p class="fragment">Hello 👋, Lektor Kirk 😏</p>
+			</section>
+			<section>
+				<h2>Ask questions the smart way</h2>
+				<ul>
+					<li>Describe the <mark>symptoms</mark> of your problem
+						<ul>
+							<li>Be careful and clear</li>
+						</ul>
+					</li>
+					<li>Describe your own <mark>research</mark>
+						<ul>
+							<li>What did you try to do to understand the problem?</li>
+						</ul>
+					</li>
+					<li>Describe the diagnostic <mark>steps</mark> you took 
+						<ul>
+							<li>What did you do to pin down the problem?</li>
+						</ul>
+					</li>
+					<li>Provide a way to <mark>reproduce</mark> the problem 
+						<ul>
+							<li>In a runnable, controlled environment</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section section data-background-image="../img/swat-briefing.png" data-background-opacity="0.5">
+				<h2>Exercise 4</h2>
+				<ul>
+					<li>Code @ <code>code/debugging/04 Hardcore/04.02 Encoding.py</code></li>
+					<li>Fix the bugs, so the program is runnable
+						<ul>
+							<li>What type of bugs did you find?</li>
+							<li>Were there any difference in difficulty?</li>
+						</ul>
+					</li>
+				</ul>
+				<hr />
+				<countdown time="960" autostart="no" />
+			</section>
+			<section>
+				<h2>Wrap-up</h2>
+				<ul>
+					<li>Identification 
+						<ul>
+							<li>What is the error type?</li>
+						</ul>
+					</li>
+					<li>Resolution
+						<ul>
+							<li>Reproduction</li>
+							<li>Reduction</li>
+						</ul>
+					</li>
+					<li>Miscellaneous
+						<ul>
+							<li>Ask questions the smart way</li>
+							<li>Treat <mark>Warnings</mark> as <mark class="error">Errors</mark></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/notes/notes.js"></script>
+		<script src="../../plugin/markdown/markdown.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+          			{ src: "../../plugin/countdown/countdown.js" },
+		        ],
+				countdown: {
+					playTickSoundLast: 10,
+					tickSound: "http://soundbible.com/grab.php?id=2044&type=mp3",
+					timeIsUpSound: "http://soundbible.com/grab.php?id=1746&type=mp3"
+				},
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
